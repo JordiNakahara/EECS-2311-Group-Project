@@ -2,7 +2,7 @@
 
 This is the planning portion of our project. Here we will discuss what features we plan on including in our final product. 
 
-From deliberations with a future customer, we have decided to implement these features into our app:
+## From deliberations with a future customer, we have decided to implement these features into our app:
 1. Customizable exercise choices.
 2. Choose difficulty/area of workout.
 3. Video showing exercise for the duration of the workout.
