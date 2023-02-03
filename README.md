@@ -2,6 +2,8 @@
 
 This is the planning portion of our project. Here we will discuss what features we plan on including in our final product. 
 
+We are planning on creating a standalone Java fitness app for the personal computer, where our focus is to streamline exercising to reduce the motivation lost when having to navigate a complex app just to get fit. The basics of the application is that it allows the user to pick a part of the body to workout, where then they will be provided a video showcasing the suggested workout routine. The app will also be able to track your progress.   
+
 ## From deliberations with a future customer, we have decided to implement these features into our app:
 1. Customizable exercise choices.
 2. Choose difficulty/area of workout.
@@ -10,4 +12,6 @@ This is the planning portion of our project. Here we will discuss what features 
 5. Being able to extend rest times between workouts incase pace is too fast.
 6. Being able to save your favourite exercises.
 7. Have goals suggested by the app to help keep you fit and on track. 
+
+
 
