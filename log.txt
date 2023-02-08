@@ -11,7 +11,7 @@
  - Create a new README and make it the wiki
  - Business logic = fitness app logic
  - Domain specific components = java components
- - Create a UML (system architecture)
+ - System architecture = sketch of 3 layers and which classes go where
  - Need 3 packages
    - Presentation package = GUI classes
    - Business logic package = BMR class, processing stuff, etc.
