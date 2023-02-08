@@ -1,1 +1,14 @@
 #Day 1: Wed Feb 8 Log
+##Meeting summary
+ - ITR1 will have a BMR class
+ - Home page GUI
+     - We realized that we needed it for navigation purposes
+ - User profile GUI
+ - Stub database (text file)
+ - A profile class
+ - Unit testing for BMR class
+ - Convert README to a planning document and update it
+ - Create a new README and make it the wiki
+ - Business logic = fitness app logic
+ - Domain specific components = java components
+ - Create a UML (system architecture)
