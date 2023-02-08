@@ -12,3 +12,11 @@
  - Business logic = fitness app logic
  - Domain specific components = java components
  - Create a UML (system architecture)
+ - Need 3 packages
+   - Presentation package = GUI classes
+   - Business logic package = BMR class, processing stuff, etc.
+   - Persistence package = Anything database related
+ - The wiki links any documentation on the project
+ - Progamming likely in eclipse using Egit
+ - To do for iteration 1:
+   - 
