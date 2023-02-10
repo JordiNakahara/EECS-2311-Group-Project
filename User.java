@@ -10,6 +10,16 @@ public class User {
     private int height;
     private int age;
     private double BMR;
+    
+    public User(){
+        this.firstName = "";
+        this.lastName = "";
+        this.gender = '';
+        this.weight = 0;
+        this.height = 0;
+        this.age = 0;
+        this.BMR = 0;
+    }
 
     public User (String firstName, String lastName, char gender, int weight, int height, int age){
         this.firstName = setFName(firstName);
