@@ -1,5 +1,3 @@
-package EECS2311;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
