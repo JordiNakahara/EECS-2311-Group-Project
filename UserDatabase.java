@@ -22,7 +22,7 @@ public class UserDatabase {
 				writer.close();
 			}
 		} catch (Exception e) {
-			System.out.println("Something went wrong while trying to write to the file.");
+			System.out.println("Could not write to user file!");
 		}
 
 	}
@@ -38,7 +38,8 @@ public class UserDatabase {
 			}
 			sc.close();
 		} catch (Exception e) {
-
+			System.out.println("Could not read user file!");
+			return "Error reading user file";
 		}
 
 		return output;
@@ -53,16 +54,16 @@ public class UserDatabase {
 			output = output + sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's first name!");
+			return "Error";
 		}
-		
+
 		int temp = output.indexOf(':') + 1;
 		output = output.substring(temp);
 		return output;
 
 	}
 
-	
 	public static String readLastName() {
 		String output = "";
 		File userInfo = new File("userInfo.txt");
@@ -73,17 +74,18 @@ public class UserDatabase {
 			output = output + "\n" + sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's last name!");
+			return "Error";
 		}
-		
+
 		int temp = output.indexOf(':') + 1;
 		output = output.substring(temp);
 		return output;
 
 	}
-	
+
 	public static char readGender() {
-		char output = 'e';
+		char output = 0;
 		String input = "";
 		File userInfo = new File("userInfo.txt");
 
@@ -94,15 +96,16 @@ public class UserDatabase {
 			input = sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's gender!");
+			return 0;
 		}
-		
+
 		int temp = input.indexOf(':') + 1;
 		output = input.charAt(temp);
 		return output;
 
 	}
-	
+
 	public static int readWeight() {
 		int output = 0;
 		String input = "";
@@ -116,16 +119,17 @@ public class UserDatabase {
 			input = sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's weight!");
+			return 0;
 		}
-		
+
 		int temp = input.indexOf(':') + 1;
 		input = input.substring(temp);
 		output = Integer.parseInt(input);
 		return output;
 
 	}
-	
+
 	public static int readHeight() {
 		int output = 0;
 		String input = "";
@@ -140,16 +144,17 @@ public class UserDatabase {
 			input = sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's height!");
+			return 0;
 		}
-		
+
 		int temp = input.indexOf(':') + 1;
 		input = input.substring(temp);
 		output = Integer.parseInt(input);
 		return output;
 
 	}
-	
+
 	public static int readAge() {
 		int output = 0;
 		String input = "";
@@ -165,9 +170,10 @@ public class UserDatabase {
 			input = sc.nextLine();
 			sc.close();
 		} catch (Exception e) {
-			
+			System.out.println("Could not read user's age!");
+			return 0;
 		}
-		
+
 		int temp = input.indexOf(':') + 1;
 		input = input.substring(temp);
 		output = Integer.parseInt(input);
