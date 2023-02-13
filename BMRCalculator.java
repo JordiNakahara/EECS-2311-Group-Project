@@ -2,18 +2,18 @@ public class BMRCalculator{
 
     double BMR;
   
-    public static double BMRCalc(char gender, int weight, int height, int age){
-        if(gender == 'M'){
-            BMR = ((10*weight)+(6.25*height)-(5*age)+5);
+    public static double BMRCalc(User user){
+        if(user.gender == 'M'){
+            user.BMR = ((10*user.weight)+(6.25*user.height)-(5*user.age)+5);
         }
-        else if (gender == 'F'){
-            BMR = ((10*weight)+(6.25*height)-(5*age)+161);
+        else if (user.gender == 'F'){
+            user.BMR = ((10*user.weight)+(6.25*user.height)-(5*user.age)+161);
         }
         return BMR;
     }
     
     public double getBMR(){
-           return this.BMR;
+        return this.BMR;
     }
     
 }
