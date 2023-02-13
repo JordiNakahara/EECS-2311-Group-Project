@@ -28,7 +28,8 @@ public class User {
         this.weight = setWeight(weight);
         this.height = setHeight(height);
         this.age = setAge(age);
-        this.BMR = BMRCalc(this.gender, this.weight, this.height, this.age);
+        this.BMR = BMRCalculator.BMRCalc(this.gender, this.weight, this.height, this.age);
+        
     }
 
     public void setFName(String fName){
