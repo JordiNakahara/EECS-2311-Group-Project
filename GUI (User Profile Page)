@@ -1,1 +1,8 @@
 //Create the GUI for the user profile page and have the textbox's for the users info and be able to take the info given by the user and take that to the user database. 
+
+
+public class UserProfileGUI {
+  public static void main(String[] args) {
+  
+  }
+}
