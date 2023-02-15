@@ -20,6 +20,28 @@
  - Progamming likely in eclipse using Egit
  - To do for iteration 1:
    - 
+   
+#Day 2: Thurs Feb 9 Log
+##Harrish's Commits
+  - Created BMRCalc class and initialized the BMRCalc methods code. Assisted by Gaurav.
+  
+
+#Day 3: Fri Feb 10 Log
+##Harrish's Commits
+  - Created User class.
+  - Updated User class to have initial coding requirements such as instance variables, a overloaded constructor, and getter/setter methods.
+  - Updated User class to create a constructor method that takes no input parameters.
+  
+ #Day 6: Mon Feb 13 Log
+ ##Harrish's Commits
+   - Updated BMRCalc class to have getter and setter methods.
+   - Updated BMRCalc class to be named BMRCalculator so that the use case is more clear. Also removed setter method and set the main function to private.
+   - Updated User class to adjust coding of the overloaded constructor class and how it creates the object.
+   - Updated the User class overloaded constructor method to use regular constructor method to create User object first before using the parameters required to set values of the User object.
+   - Updated BMRCalculator class method to run using a User object instead of just the parameters required for the mathematical function. Made the main function public again.
+ 
+  
+ 
 
 #Day 8: Wed Feb 15 log
 ##Meeting summary
