@@ -9,12 +9,12 @@ public class User {
     private int weight;
     private int height;
     private int age;
-    private double BMR;
+    public double BMR;
     
     public User(){
         this.firstName = "";
         this.lastName = "";
-        this.gender = '';
+        this.gender = 0;
         this.weight = 0;
         this.height = 0;
         this.age = 0;
@@ -23,13 +23,13 @@ public class User {
 
     public User (String firstName, String lastName, char gender, int weight, int height, int age){
         User user = new User();
-        user.firstName = setFName(firstName);
-        user.lastName = setLName(lastName);
-        user.gender = setGender(gender);
-        user.weight = setWeight(weight);
-        user.height = setHeight(height);
-        user.age = setAge(age);
-        user.BMR = BMRCalculator.BMRCalc(user);        
+        user.setFName(firstName);
+        user.setLName(lastName);
+        user.setGender(gender);
+        user.setWeight(weight);
+        user.setHeight(height);
+        user.setAge(age);
+        user.setBMR(user);        
     }
 
     public void setFName(String fName){
@@ -84,5 +84,8 @@ public class User {
         return this.BMR;    
     }
     
+    public void setBMR(User user){
+        this.BMR = BMRCalculator.BMRCalc(user);
+    }
     
 }
