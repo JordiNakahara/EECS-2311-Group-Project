@@ -20,3 +20,12 @@
  - Progamming likely in eclipse using Egit
  - To do for iteration 1:
    - 
+
+#Day 8: Wed Feb 15 log
+##Meeting summary
+  - Remaining to do:
+    - GUIs
+    - Unit testing
+    - Revise planning from iteration 0 (on a new document)
+    - Wiki
+    - Architecture sketch
