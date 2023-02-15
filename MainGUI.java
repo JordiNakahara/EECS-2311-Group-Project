@@ -52,9 +52,10 @@ class UserProfileGUI extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the user profile GUI
+        VBox root = new VBox();
 
         // Create a scene and set the root node
-        Scene scene = new Scene(/* user profile GUI root node */, 300, 200);
+        Scene scene = new Scene(root, 300, 200);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("User Profile");
@@ -68,9 +69,10 @@ class WorkoutsGUI extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the workouts GUI
+        VBox root = new VBox();
 
         // Create a scene and set the root node
-        Scene scene = new Scene(/* workouts GUI root node */, 300, 200);
+        Scene scene = new Scene(root, 300, 200);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("Workouts");
