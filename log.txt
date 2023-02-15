@@ -24,6 +24,9 @@
 #Day 2: Thurs Feb 9 Log
 ##Harrish's Commits
   - Created BMRCalc class and initialized the BMRCalc methods code. Assisted by Gaurav.
+##Jordi's Commits
+  - Created a stub database class
+    - The class reads and writes user information to a text file
   
 
 #Day 3: Fri Feb 10 Log
@@ -31,6 +34,9 @@
   - Created User class.
   - Updated User class to have initial coding requirements such as instance variables, a overloaded constructor, and getter/setter methods.
   - Updated User class to create a constructor method that takes no input parameters.
+##Jordi's Commits
+  - Added error handling to the database class
+  - Added the ability to read individual user properties from the text file
   
  #Day 6: Mon Feb 13 Log
  ##Harrish's Commits
