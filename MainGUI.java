@@ -3,6 +3,9 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class MainGUI extends Application {
@@ -12,6 +15,10 @@ public class MainGUI extends Application {
         // Create the buttons
         Button userProfileBtn = new Button("User Profile");
         Button workoutsBtn = new Button("Workouts");
+
+        // Increase button font size
+        userProfileBtn.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
+        workoutsBtn.setFont(Font.font("Verdana", FontWeight.BOLD, 24));
 
         // Attach event handlers to the buttons
         userProfileBtn.setOnAction(e -> {
@@ -29,12 +36,16 @@ public class MainGUI extends Application {
         });
 
         // Create a vertical box and add the buttons to it
-        VBox root = new VBox(20);
+        VBox root = new VBox(40);
         root.setAlignment(Pos.CENTER);
         root.getChildren().addAll(userProfileBtn, workoutsBtn);
 
+        // Increase text font size
+        Text title = new Text("Main GUI");
+        title.setFont(Font.font("Verdana", FontWeight.BOLD, 36));
+
         // Create a scene and set the root node
-        Scene scene = new Scene(root, 300, 200);
+        Scene scene = new Scene(root, 600, 400);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("Main GUI");
@@ -52,10 +63,13 @@ class UserProfileGUI extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the user profile GUI
-        VBox root = new VBox();
+
+        // Increase text font size
+        Text title = new Text("User Profile");
+        title.setFont(Font.font("Verdana", FontWeight.BOLD, 36));
 
         // Create a scene and set the root node
-        Scene scene = new Scene(root, 300, 200);
+        Scene scene = new Scene(/* user profile GUI root node */, 600, 400);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("User Profile");
@@ -69,10 +83,13 @@ class WorkoutsGUI extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Create the workouts GUI
-        VBox root = new VBox();
+
+        // Increase the text font size
+        Text title = new Text("Workouts");
+        title.setFont(Font.font("Verdana", FontWeight.BOLD, 36)); // set font
 
         // Create a scene and set the root node
-        Scene scene = new Scene(root, 300, 200);
+        Scene scene = new Scene(/* workouts GUI root node */, 600, 400);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("Workouts");
