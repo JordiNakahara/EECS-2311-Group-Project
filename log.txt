@@ -57,3 +57,7 @@
     - Revise planning from iteration 0 (on a new document)
     - Wiki
     - Architecture sketch
+    
+##Harrish's Commits
+   - Updated user class instance variable BMR to public so that it can be affected by BMRCalc method. Also changed code to use the classes setter and getter methods.
+   - Updated BMR class to use User class getter methods in code. 
