@@ -7,5 +7,6 @@
 ## Main code files
  - BMRCalulator.java is the BMRCalculator class and it falls under the business logic layer
  - MainGUI.java is the GUI for the main page falls under the presentation layer
+ - UserInputGUI.java is the GUI for the User's Data Input page falls under the presentation layer
  - User.java is used to create user profiles it falls under the business logic layer
  - UserDatabase.java is used to save the user profile to a stub database it falls under the persistence layer
