@@ -18,8 +18,13 @@
    - Persistence package = Anything database related
  - The wiki links any documentation on the project
  - Progamming likely in eclipse using Egit
- - To do for iteration 1:
-   - 
+ - Breakdown of To do for iteration 1:
+   - Home page + User Profile GUI - Harjot and Gaurav - 7 hours
+   - User Class and BMRCalculator class - Harrish - 5 hours
+   - Stub Database and Architecture Sketch - Jordi - 6 Hours
+   - Unit tests - Zeena - 5 hours
+   
+  
    
 #Day 2: Thurs Feb 9 Log
 ##Harrish's Commits
