@@ -22,14 +22,13 @@ public class User {
     }
 
     public User (String firstName, String lastName, char gender, double weight, double height, int age){
-        User user = new User();
-        user.setFName(firstName);
-        user.setLName(lastName);
-        user.setGender(gender);
-        user.setWeight(weight);
-        user.setHeight(height);
-        user.setAge(age);
-        user.setBMR(user);        
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.weight = weight;
+        this.height = height;
+        this.age = age;
+        setBMR(this);       
     }
 
     public void setFName(String fName){
