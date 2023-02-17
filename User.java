@@ -6,8 +6,8 @@ public class User {
     private String firstName;
     private String lastName;
     private char gender;
-    private int weight;
-    private int height;
+    private double weight;
+    private double height;
     private int age;
     public double BMR;
     
@@ -21,7 +21,7 @@ public class User {
         this.BMR = 0;
     }
 
-    public User (String firstName, String lastName, char gender, int weight, int height, int age){
+    public User (String firstName, String lastName, char gender, double weight, double height, int age){
         User user = new User();
         user.setFName(firstName);
         user.setLName(lastName);
@@ -56,19 +56,19 @@ public class User {
         return this.gender;
     }
 
-    public void setWeight(int weight){
+    public void setWeight(double weight){
         this.weight = weight;
     }
 
-    public int getWeight(){
+    public double getWeight(){
         return this.weight;
     }
 
-    public void setHeight(int height){
+    public void setHeight(double height){
         this.height = height;
     }
 
-    public int getHeight(){
+    public double getHeight(){
         return this.height;
     }
 
