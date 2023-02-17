@@ -68,6 +68,6 @@
    - Updated user class instance variable BMR to public so that it can be affected by BMRCalc method. Also changed code to use the classes setter and getter methods.
    - Updated BMR class to use User class getter methods in code. 
    
-#Day 10: Wed Feb 15 log
+#Day 10: Fri Feb 17 log
 ##Zeena's Commits
    - Added junit test files
