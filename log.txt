@@ -19,10 +19,11 @@
  - The wiki links any documentation on the project
  - Progamming likely in eclipse using Egit
  - Breakdown of To do for iteration 1:
-   - Home page + User Profile GUI - Harjot and Gaurav - 7 hours
-   - User Class and BMRCalculator class - Harrish - 5 hours
-   - Stub Database and Architecture Sketch - Jordi - 6 Hours
-   - Unit tests - Zeena - 5 hours
+   - Home page + User Profile GUI - Harjot and Gaurav - 5 days
+   - User Class and BMRCalculator class - Harrish - 3 days
+   - Stub Database and Architecture Sketch - Jordi - 4 days
+   - Unit testing - Zeena - 4 days
+   - Planning document/Wiki - Gauarv and Jordi - 2 days 
    
   
    
