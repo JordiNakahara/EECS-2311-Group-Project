@@ -71,3 +71,20 @@
 #Day 10: Fri Feb 17 log
 ##Zeena's Commits
    - Added junit test files
+   
+#Dat 1: Mon Feb 27 log
+##Meeting summary
+   - Meet with Omnia again
+   - GUI is not as important for this iteration
+     - We should still spend some time working on the GUI
+   - This iteration is database heavy
+   - What we need for iteration 2:
+     - Enter data
+     - Store data
+     - Pull up data at a later time
+     - Data is user information
+     - Implement a basic form of workouts
+     - Possibly implement streaks
+   - Mandatory attendance in Wednesday lecture hours.
+   - Need to communicate better as a group
+   - 
