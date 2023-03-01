@@ -72,7 +72,7 @@
 ##Zeena's Commits
    - Added junit test files
    
-#Dat 1: Mon Feb 27 log
+#Day 1: Mon Feb 27 log
 ##Meeting summary
    - Meet with Omnia again
    - GUI is not as important for this iteration
@@ -88,3 +88,18 @@
    - Mandatory attendance in Wednesday lecture hours.
    - Need to communicate better as a group
    - 
+
+#Day 3: Wed Mar 1 log
+##Meeting summary
+   - After a meeting with a client we revised our big user stories
+     1: Adding workout choices
+     2: Select difficulty and duration
+     3: Add GIF's for the workouts and maybe simpler version of workout
+     4: Rest periods within the workout
+     5: Suggested exercises based on categories not done
+     6: Favourite exercises based on workout history
+   - To-do for iteration 2:
+     - Add workouts
+     - Make real database with MySQL
+     - More unit tests
+     - Tidy code and planning
