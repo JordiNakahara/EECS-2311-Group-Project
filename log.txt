@@ -101,5 +101,8 @@
    - To-do for iteration 2:
      - Add workouts
      - Make real database with MySQL
+       - Initialize database and table
+       - Store user information to table
+       - Update user information as needed
      - More unit tests
      - Tidy code and planning
