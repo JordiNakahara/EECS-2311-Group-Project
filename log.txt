@@ -106,3 +106,10 @@
        - Update user information as needed
      - More unit tests
      - Tidy code and planning
+     
+   - Word distribution for iteration 2:
+     - Jordi: Change stub database to real database, update User profile GUI to match needs, create database and necessary methods for exercises, and can help with junit if needed
+     - Zeena: Workout timer method and junit tests
+     - Harjot: Workout GUI
+     - Gaurav: Workout class and workout GUI
+     - Harish: Workout class, and workout start GUI
