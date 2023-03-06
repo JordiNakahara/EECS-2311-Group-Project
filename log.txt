@@ -52,9 +52,9 @@
    - Updated the User class overloaded constructor method to use regular constructor method to create User object first before using the parameters required to set values of the User object.
    - Updated BMRCalculator class method to run using a User object instead of just the parameters required for the mathematical function. Made the main function public again.
  
-  
+##Harjot's Commits - Feb 15 
+   - Added Main GUI in GUI branch
  
-
 #Day 8: Wed Feb 15 log
 ##Meeting summary
   - Remaining to do:
@@ -113,3 +113,6 @@
      - Harjot: Workout GUI
      - Gaurav: Workout class and workout GUI
      - Harish: Workout class, and workout start GUI
+
+##Harjot's Commits - March 6th 
+   - Updated Main GUI to include a working workouts page (page is still in progress)
