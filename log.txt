@@ -52,9 +52,9 @@
    - Updated the User class overloaded constructor method to use regular constructor method to create User object first before using the parameters required to set values of the User object.
    - Updated BMRCalculator class method to run using a User object instead of just the parameters required for the mathematical function. Made the main function public again.
  
-  
+##Harjot's Commits - Feb 15 
+   - Added Main GUI in GUI branch
  
-
 #Day 8: Wed Feb 15 log
 ##Meeting summary
   - Remaining to do:
@@ -107,9 +107,12 @@
      - More unit tests
      - Tidy code and planning
      
-   - Word distribution for iteration 2:
+   - Work distribution for iteration 2:
      - Jordi: Change stub database to real database, update User profile GUI to match needs, create database and necessary methods for exercises, and can help with junit if needed
      - Zeena: Workout timer method and junit tests
      - Harjot: Workout GUI
      - Gaurav: Workout class and workout GUI
      - Harish: Workout class, and workout start GUI
+
+##Harjot's Commits - March 6th 
+   - Updated Main GUI to include a working workouts page (page is still in progress)
