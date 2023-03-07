@@ -125,4 +125,4 @@
   
 #Day 9: Tues Mar 7 Log
 ## Harrish's Commits
- - Updated Main GUI from previous initial commit to include further stages of the project GUI
+ - Updated Main GUI from previous initial commit to include further stages of the project GUI - This took about 3 hours to get done.
