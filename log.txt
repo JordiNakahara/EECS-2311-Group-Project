@@ -122,3 +122,7 @@
   - Added initialization script for database
     - The new user created in the script cannot access the database from the UserDatabase class
   - Had some bugs with egit that resulted in unitentional commits
+  
+#Day 9: Tues Mar 7 Log
+## Harrish's Commits
+ - Updated Main GUI from previous initial commit to include further stages of the project GUI
