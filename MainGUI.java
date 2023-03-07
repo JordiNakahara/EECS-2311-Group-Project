@@ -202,8 +202,8 @@ class WorkoutStartGUI extends Application {
         nextButton.setOnAction(e -> {
             // Create a new window for the user profile GUI
             Stage difficultyStage = new Stage();
-            TimerSet timerset = new TimerSet();
-            timerset.start(difficultyStage);
+            Durdiff durDiffSet = new DurDiff();
+            durDiffSet.start(difficultyStage);
             primaryStage.close();
         });
 
@@ -221,6 +221,61 @@ class WorkoutStartGUI extends Application {
     }
 
 
+}
+
+class DurDiff extends Application {
+
+        public void start(Stage primaryStage) {
+
+            VBox root = new VBox(20);
+            ComboBox combobox = new ComboBox();
+            combobox.setPromptText("Choose Difficulty/Duration");
+            combobox.getItems().add("Easy - 5 Min");
+            combobox.getItems().add("Medium - 10 Min");
+            combobox.getItems().add("Hard - 15 Min");
+
+            Button nextButton = new Button("Continue");
+            Button backButton = new Button("Back");
+
+            backButton.setOnAction(e -> {
+                // Create a new window for the user profile GUI
+                Stage workoutsStage = new Stage();
+                WorkoutsGUI workoutsGUI = new WorkoutsGUI();
+                workoutsGUI.start(workoutsStage);
+                primaryStage.close();
+            });
+
+            root.getChildren().addAll(combobox,nextButton,backButton);
+            root.setAlignment(Pos.CENTER);
+
+            Scene scene = new Scene(root, 600, 400);
+
+            primaryStage.setTitle("Duration/Difficulty");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+            nextButton.setOnAction(e -> {
+                String choice = (String) combobox.getValue();
+                if (choice.equals("Easy - 5 Min")) {
+                    // Do something for the easy option
+
+                    //  primaryStage.close();
+                } else if (choice.equals("Medium - 10 Min")) {
+                    // Do something for the medium option
+
+
+                   // primaryStage.close();
+                } else if (choice.equals("Hard - 15 Min")) {
+                    // Do something for the hard option
+
+
+                  //  primaryStage.close();
+                } else {
+                    // Do Nothing
+
+                }
+            });
+    }
 }
 
 
