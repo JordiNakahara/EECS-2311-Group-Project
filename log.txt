@@ -116,3 +116,9 @@
 
 ##Harjot's Commits - March 6th 
    - Updated Main GUI to include a working workouts page (page is still in progress)
+   
+#Day 8: Mon Mar 6 Log
+##Jordi's Commits
+  - Added initialization script for database
+    - The new user created in the script cannot access the database from the UserDatabase class
+  - Had some bugs with egit that resulted in unitentional commits
