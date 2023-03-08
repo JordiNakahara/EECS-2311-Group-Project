@@ -273,18 +273,18 @@ class DurDiff extends Application {
 
             nextButton.setOnAction(e -> {
                 String choice = (String) combobox.getValue();
-                if (choice.equals("Easy - 5 Min")) {
+                if (choice.equals("Easy - 3 Min")) {
                     // Do something for the easy option
                     System.out.println("Easy");
 
                     //  primaryStage.close();
-                } else if (choice.equals("Medium - 10 Min")) {
+                } else if (choice.equals("Medium - 6 Min")) {
                     // Do something for the medium option
                     System.out.println("Medium");
 
 
                    // primaryStage.close();
-                } else if (choice.equals("Hard - 15 Min")) {
+                } else if (choice.equals("Hard - 9 Min")) {
                     // Do something for the hard option
                     System.out.println("Hard");
 
