@@ -15,7 +15,7 @@ public class UserDatabase {
 		try {
 			Scanner sc = new Scanner(databasePassword);
 			while (sc.hasNextLine()) {
-				password = password + "\n" + sc.nextLine();
+				password = sc.nextLine();
 			}
 			sc.close();
 		} catch (Exception e) {
@@ -34,6 +34,8 @@ public class UserDatabase {
 			 weight, height, age, bmr) values (" + user.getFName + ", " +
 			  user.getLName + ", " + user.getGender + ", " + user.getWeight
 			   + ", " + user.getHeight + ", " + user.getBMR + ");";
+
+			   state.executeQuery(command);
 		} catch (Exception e) {
 			System.out.println("Could not add user data to table")
 		}
@@ -44,21 +46,45 @@ public class UserDatabase {
 	}
 
 	public static String readUserFile() {
+
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
 		String output = "";
-		File userInfo = new File("userInfo.txt");
 
 		try {
-			Scanner sc = new Scanner(userInfo);
+			Scanner sc = new Scanner(databasePassword);
 			while (sc.hasNextLine()) {
-				output = output + "\n" + sc.nextLine();
+				password = sc.nextLine();
 			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user file!");
-			return "Error reading user file";
+			System.out.println("Could not read root password");
 		}
 
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
+
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = "First name: " + rs.getString("first_name") + /n
+			 + "Last name: " + rs.getString("last_name") + /n +
+			  "Gender: " + rs.getString("gender") + /n + "Weight: " 
+			  + rs.getString("weight") + /n + "Height: " +
+			   rs.getString("height") + /n + "Age: " +
+			    rs.getString("age") + /n + "BMR: "
+				 + rs.getString("bmr") + /n;
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
 	}
 
 	public static String readFirstName() {
