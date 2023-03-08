@@ -397,8 +397,14 @@ class DurDiff extends Application {
             primaryStage.close();
         });
 
-        root.getChildren().addAll(combobox,nextButton,backButton);
-        root.setAlignment(Pos.CENTER);
+        root.getChildren().add(backButton);
+        root.getChildren().addAll(combobox,nextButton);
+        backButton.setTranslateX(0);
+        backButton.setTranslateY(0);
+        combobox.setTranslateX(215);
+        combobox.setTranslateY(100);
+        nextButton.setTranslateX(275);
+        nextButton.setTranslateY(100);
 
         Scene scene = new Scene(root, 600, 400);
 
