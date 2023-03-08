@@ -124,6 +124,10 @@
   - Had some bugs with egit that resulted in unitentional commits
   
 #Day 9: Tues Mar 7 Log
-## Harrish's Commits
+##Harrish's Commits
  - Updated Main GUI from previous initial commit to include further stages of the project GUI - This took about 3 hours to get done.
  - Added Duration/Difficulty selection GUI stage. Set up initial logic to have each selection in the combo boxes do different tasks when continue button is pressed. - This took about another 3 hours or so to complete.
+ 
+#Day 10: Wed Mar 8 Log
+##Harrish's Commits
+  - Updated MainGUI to have UserInputGUI work. Figured out how to use JFrame with Javafx. Figured out how to show images beside combo boxes in the workoutStartGUI. Adjusted location of most of the buttons and combo boxes to look cleaner. - This took about 4.5 hours to do.  
