@@ -150,8 +150,21 @@ class WorkoutsGUI extends Application {
             testGUI.start(cardioStage);
             primaryStage.close();
         });
+
+        /*comboButton.setOnAction(e -> {
+            // Create a new window for the user profile GUI
+            Stage welcomeStage = new Stage();
+            MainGUI mainGUI = new MainGUI();
+            mainGUI.start(welcomeStage);
+            primaryStage.close();
+        }); */
+
+
+
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(chestButton, armsButton, absButton, legsButton, cardioButton, backButton);
+        root.getChildren().addAll(chestButton, armsButton, absButton, legsButton, cardioButton);
+        //foot.setAlignment(Pos.TOP_LEFT);
+        root.getChildren().add(backButton);
 
         // Create a scene and set the root node
         Scene scene = new Scene(root, 600, 400);
@@ -165,30 +178,34 @@ class WorkoutsGUI extends Application {
 
 class WorkoutStartGUI extends Application {
 
+    public String type;
+
     public void start(Stage primaryStage) {
 
         VBox root = new VBox(20);
         ComboBox combobox = new ComboBox();
+        combobox.setPromptText("Exercise 1");
         combobox.getItems().add("Choice 1");
         combobox.getItems().add("Choice 2");
         combobox.getItems().add("Choice 3");
-        combobox.getSelectionModel().selectFirst();
+
 
         ComboBox combobox1 = new ComboBox();
+        combobox1.setPromptText("Exercise 2");
         combobox1.getItems().add("Choice 1");
         combobox1.getItems().add("Choice 2");
         combobox1.getItems().add("Choice 3");
-        combobox1.getSelectionModel().selectFirst();
+
 
         ComboBox combobox2 = new ComboBox();
+        combobox2.setPromptText("Exercise 3");
         combobox2.getItems().add("Choice 1");
         combobox2.getItems().add("Choice 2");
         combobox2.getItems().add("Choice 3");
-        combobox2.getSelectionModel().selectFirst();
-	    
-	// Will need to figure out how to connect these combo boxes
+
 
         Button nextButton = new Button("Continue");
+
         Button backButton = new Button("Back");
 
         backButton.setOnAction(e -> {
@@ -202,8 +219,12 @@ class WorkoutStartGUI extends Application {
         nextButton.setOnAction(e -> {
             // Create a new window for the user profile GUI
             Stage difficultyStage = new Stage();
-            Durdiff durDiffSet = new DurDiff();
+            DurDiff durDiffSet = new DurDiff();
             durDiffSet.start(difficultyStage);
+
+            //insert stage creation here to lead to the workouts page
+
+
             primaryStage.close();
         });
 
@@ -213,14 +234,10 @@ class WorkoutStartGUI extends Application {
 
         Scene scene = new Scene(root, 600, 400);
 
-        primaryStage.setTitle("Workout Start");
+        primaryStage.setTitle(this.type);
         primaryStage.setScene(scene);
         primaryStage.show();
-
-
     }
-
-
 }
 
 class DurDiff extends Application {
@@ -258,15 +275,18 @@ class DurDiff extends Application {
                 String choice = (String) combobox.getValue();
                 if (choice.equals("Easy - 5 Min")) {
                     // Do something for the easy option
+                    System.out.println("Easy");
 
                     //  primaryStage.close();
                 } else if (choice.equals("Medium - 10 Min")) {
                     // Do something for the medium option
+                    System.out.println("Medium");
 
 
                    // primaryStage.close();
                 } else if (choice.equals("Hard - 15 Min")) {
                     // Do something for the hard option
+                    System.out.println("Hard");
 
 
                   //  primaryStage.close();
@@ -277,6 +297,5 @@ class DurDiff extends Application {
             });
     }
 }
-
 
 // to get this to work, you need to have the javafx libraries included and make sure that you set up the VM options to use those libraries
