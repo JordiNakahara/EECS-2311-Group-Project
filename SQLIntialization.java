@@ -3,6 +3,7 @@ package EECS2311;
 import java.sql.*;
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileWriter;
 
 public class SQLIntialization {
 	public static void main(String[] args) {
@@ -14,6 +15,17 @@ public class SQLIntialization {
 		Connection con;
 		Statement state = null;
 		String command = null;
+		File rootinfo = new File("rootinfo.txt");
+
+		try {
+			rootinfo.createNewFile();
+			FileWriter writer = new FileWriter("rootinfo.txt");
+			writer.write(password);
+			writer.close();
+		} catch (Exception e) {
+
+		}
+		
 		
 		try {
 			con = DriverManager.getConnection(url, user, password);
