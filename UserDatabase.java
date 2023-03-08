@@ -1,29 +1,45 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
+import java.sql.*;
 
 public class UserDatabase {
 
 	public static void writeUserToFile(User user) {
-		String output = "FirstName:" + user.getFName() + "\nLastName:" + user.getLName() + "\nGender:"
-				+ user.getGender() + "\nWeight:" + user.getWeight() + "\nHeight:" + user.getHeight() + "\nAge:"
-				+ user.getAge() + "\nBMR:" + user.getBMR();
-		File userInfo = new File("userInfo.txt");
+
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+
 		try {
-
-			if (userInfo.createNewFile()) {
-				FileWriter writer = new FileWriter("userInfo.txt");
-				writer.write(output);
-				writer.close();
-
-			} else {
-				FileWriter writer = new FileWriter("userInfo.txt");
-				writer.write(output);
-				writer.close();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = password + "\n" + sc.nextLine();
 			}
+			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not write to user file!");
+			System.out.println("Could not read root password");
 		}
+
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
+
+		try {
+			String command = "insert into userdata (first_name, last_name, gender,
+			 weight, height, age, bmr) values (" + user.getFName + ", " +
+			  user.getLName + ", " + user.getGender + ", " + user.getWeight
+			   + ", " + user.getHeight + ", " + user.getBMR + ");";
+		} catch (Exception e) {
+			System.out.println("Could not add user data to table")
+		}
+
+
+
 
 	}
 
