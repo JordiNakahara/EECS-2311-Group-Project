@@ -88,139 +88,263 @@ public class UserDatabase {
 	}
 
 	public static String readFirstName() {
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
 		String output = "";
-		File userInfo = new File("userInfo.txt");
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			output = output + sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's first name!");
-			return "Error";
+			System.out.println("Could not read root password");
 		}
 
-		int temp = output.indexOf(':') + 1;
-		output = output.substring(temp);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
 
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("first_name");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return output;
 	}
 
 	public static String readLastName() {
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
 		String output = "";
-		File userInfo = new File("userInfo.txt");
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			sc.nextLine();
-			output = output + "\n" + sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's last name!");
-			return "Error";
+			System.out.println("Could not read root password");
 		}
 
-		int temp = output.indexOf(':') + 1;
-		output = output.substring(temp);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
 
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("last_name");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return output;
 	}
 
 	public static char readGender() {
-		char output = 0;
-		String input = "";
-		File userInfo = new File("userInfo.txt");
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+		String temp = "";
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			sc.nextLine();
-			sc.nextLine();
-			input = sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's gender!");
-			return 0;
+			System.out.println("Could not read root password");
 		}
 
-		int temp = input.indexOf(':') + 1;
-		output = input.charAt(temp);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
 
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			temp = rs.getString("gender");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return temp.charAt(0);
 	}
 
-	public static int readWeight() {
-		int output = 0;
-		String input = "";
-		File userInfo = new File("userInfo.txt");
+	public static double readWeight() {
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+		String output = "";
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			input = sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's weight!");
-			return 0;
+			System.out.println("Could not read root password");
 		}
 
-		int temp = input.indexOf(':') + 1;
-		input = input.substring(temp);
-		output = Integer.parseInt(input);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
 
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("weight");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return Double.parseDouble(output);
 	}
 
 	public static int readHeight() {
-		int output = 0;
-		String input = "";
-		File userInfo = new File("userInfo.txt");
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+		String output = "";
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			input = sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's height!");
-			return 0;
+			System.out.println("Could not read root password");
 		}
 
-		int temp = input.indexOf(':') + 1;
-		input = input.substring(temp);
-		output = Integer.parseInt(input);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
+
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("height");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return Double.parseDouble(output);
 
 	}
 
 	public static int readAge() {
-		int output = 0;
-		String input = "";
-		File userInfo = new File("userInfo.txt");
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+		String output = "";
 
 		try {
-			Scanner sc = new Scanner(userInfo);
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			input = sc.nextLine();
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
 			sc.close();
 		} catch (Exception e) {
-			System.out.println("Could not read user's age!");
-			return 0;
+			System.out.println("Could not read root password");
 		}
 
-		int temp = input.indexOf(':') + 1;
-		input = input.substring(temp);
-		output = Integer.parseInt(input);
-		return output;
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
 
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("age");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return Integer.parseInt(output);
+	}
+
+	public static double readBMR() {
+		String url = "jdbc:mysql://localhost:3306/fitnessapp";
+		String user = "root";
+		String password = "";
+		File databasePassword = new File ("rootinfo.txt");
+		String output = "";
+
+		try {
+			Scanner sc = new Scanner(databasePassword);
+			while (sc.hasNextLine()) {
+				password = sc.nextLine();
+			}
+			sc.close();
+		} catch (Exception e) {
+			System.out.println("Could not read root password");
+		}
+
+		try {
+			Connection con = DriverManager.getConnection(url, user, password);
+			Statement state = con.createStatement();
+		} catch (Exception e) {
+			System.out.println("Could not create connection");
+		}
+
+		try {
+			
+			String command = "SELECT * FROM userdata;";
+			ResultSet rs = state.executeQuery(command);
+
+			output = rs.getString("bmr");
+		} catch (Exception e) {
+			System.out.println("Could not retreive user data from table")
+		}
+
+		return Double.parseDouble(output);
 	}
 
 }
