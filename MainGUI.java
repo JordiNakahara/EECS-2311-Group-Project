@@ -1,21 +1,20 @@
+package eecs2311gui;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.*;
 
 public class MainGUI extends Application {
 
@@ -28,7 +27,10 @@ public class MainGUI extends Application {
         // Attach event handlers to the buttons
         userProfileBtn.setOnAction(e -> {
             // Create a new window for the user profile GUI
-            new UserInputGUI();
+            Stage userProfileStage = new Stage();
+            UserProfileGUI userProfileGUI = new UserProfileGUI();
+            userProfileGUI.start(userProfileStage);
+            primaryStage.close();
         });
 
         workoutsBtn.setOnAction(e -> {
@@ -58,101 +60,35 @@ public class MainGUI extends Application {
     }
 }
 
-class UserInputGUI extends JFrame {
-    // Declare components
-    private JLabel ageLabel, heightLabel, weightLabel, firstLabel, lastLabel, genderLabel;
-    private JTextField ageBox, heightBox, weightBox, firstBox, lastBox;
-    private JComboBox genderBox;
-    private JButton submitButton;
-    private JPanel inputPanel, buttonPanel;
+class UserProfileGUI extends Application {
 
-    public UserInputGUI() {
-        // Title for the window being opened
-        super("User Input Form");
+    @Override
+    public void start(Stage primaryStage) {
+        // Create the user profile GUI
+        VBox root = new VBox(20);
+        Button backButton = new Button("Back");
 
-        // Initializing everything first
-        ageLabel = new JLabel("Age:");
-        heightLabel = new JLabel("Height(Cm):");
-        weightLabel = new JLabel("Weight(Kg):");
-        ageBox = new JTextField(10);
-        heightBox = new JTextField(10);
-        weightBox = new JTextField(10);
-        submitButton = new JButton("Submit");
-        inputPanel = new JPanel(new GridLayout(3, 2));
-        buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        TextField field = new TextField("name");
 
-        firstLabel = new JLabel("First Name");
-        lastLabel = new JLabel("Last Name");
-        genderLabel = new JLabel("Gender");
-        firstBox = new JTextField(10);
-        lastBox = new JTextField(10);
-        genderBox = new JComboBox();
-        genderBox.addItem('M');
-        genderBox.addItem('F');
-
-        // Adding parts to the window
-        inputPanel.add(firstLabel);
-        inputPanel.add(firstBox);
-        inputPanel.add(lastLabel);
-        inputPanel.add(lastBox);
-        inputPanel.add(genderLabel);
-        inputPanel.add(genderBox);
-        inputPanel.add(ageLabel);
-        inputPanel.add(ageBox);
-        inputPanel.add(heightLabel);
-        inputPanel.add(heightBox);
-        inputPanel.add(weightLabel);
-        inputPanel.add(weightBox);
-
-        // Adding buttons to window
-        buttonPanel.add(submitButton);
-
-        // Add panels to the frame
-        add(inputPanel, BorderLayout.CENTER);
-        add(buttonPanel, BorderLayout.SOUTH);
-
-        // Checks to see is submit button was pressed
-        submitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Retrieve input values
-                String first = firstBox.getText().trim();
-                String last = lastBox.getText().trim();
-                char gender = (char) genderBox.getSelectedItem();
-                String age = ageBox.getText().trim();
-                String height = heightBox.getText().trim();
-                String weight = weightBox.getText().trim();
-
-                // Checks values given by user
-                if (age.isEmpty() || height.isEmpty() || weight.isEmpty() || first.isEmpty() || last.isEmpty() || gender == ' ') {
-                    JOptionPane.showMessageDialog(UserInputGUI.this, "Please enter values for all the boxes.");
-                    return;
-                }
-
-                // Paste values on the next window
-                try {
-                    PrintWriter out = new PrintWriter(new FileWriter("user_data.txt", true));
-                    out.println(first + " " + last + "," + gender + ","+ age + "," + height + "," + weight);
-                    out.close();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-
-                // Display values in the textbox
-                JOptionPane.showMessageDialog(UserInputGUI.this, "Thank you for your input!\n\nAge: " + age + "\nHeight: " + height + "\nWeight: " + weight);
-
-                // Clear inputted info
-                User user = new User(first, last, gender, Double.parseDouble(weight), Double.parseDouble(height), Integer.parseInt(age));
-                
-
-            }
+        backButton.setOnAction(e -> {
+            // Create a new window for the user profile GUI
+            Stage userProfileStage = new Stage();
+            MainGUI mainGUI = new MainGUI();
+            mainGUI.start(userProfileStage);
+            primaryStage.close();
         });
 
-        // Set frame
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        pack();
-        setLocationRelativeTo(null);
-        setVisible(true);
+        root.setAlignment(Pos.CENTER);
+        root.getChildren().addAll(field, backButton);
+
+        // Create a scene and set the root node
+        Scene scene = new Scene(root, 600, 400);
+
+        // Set the stage's title and scene, and show the stage
+        primaryStage.setTitle("User Profile");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
     }
 }
 
@@ -183,7 +119,7 @@ class WorkoutsGUI extends Application {
             Stage chestStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Chest";
-            testGUI.image = "C:\\Users\\light\\Documents\\CHEST.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\CHEST.png";
             try {
                 testGUI.start(chestStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -197,7 +133,7 @@ class WorkoutsGUI extends Application {
             Stage armStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Arms";
-            testGUI.image = "C:\\Users\\light\\Documents\\ARMS.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ARMS.png";
             try {
                 testGUI.start(armStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -211,7 +147,7 @@ class WorkoutsGUI extends Application {
             Stage abStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Abs";
-            testGUI.image = "C:\\Users\\light\\Documents\\ABS.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ABS.png";
             try {
                 testGUI.start(abStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -225,7 +161,7 @@ class WorkoutsGUI extends Application {
             Stage legStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Legs";
-            testGUI.image = "C:\\Users\\light\\Documents\\LEGS.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\LEGS.png";
             try {
                 testGUI.start(legStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -239,7 +175,7 @@ class WorkoutsGUI extends Application {
             Stage cardioStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Cardio";
-            testGUI.image = "C:\\Users\\light\\Documents\\CARDIO.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\CARDIO.png";
             try {
                 testGUI.start(cardioStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -371,7 +307,6 @@ class WorkoutStartGUI extends Application {
 
         primaryStage.setTitle(this.type);
         primaryStage.setScene(scene);
-        //primaryStage.setScene(scene1);
         primaryStage.show();
 
     }
@@ -384,9 +319,9 @@ class DurDiff extends Application {
         VBox root = new VBox(20);
         ComboBox combobox = new ComboBox();
         combobox.setPromptText("Choose Difficulty/Duration");
-        combobox.getItems().add("Easy - 5 Min");
-        combobox.getItems().add("Medium - 10 Min");
-        combobox.getItems().add("Hard - 15 Min");
+        combobox.getItems().add("Easy - 3 Min");
+        combobox.getItems().add("Medium - 6 Min");
+        combobox.getItems().add("Hard - 9 Min");
 
         Button nextButton = new Button("Continue");
         Button backButton = new Button("Back");
@@ -416,18 +351,18 @@ class DurDiff extends Application {
 
         nextButton.setOnAction(e -> {
             String choice = (String) combobox.getValue();
-            if (choice.equals("Easy - 5 Min")) {
+            if (choice.equals("Easy - 3 Min")) {
                 // Do something for the easy option
                 System.out.println("Easy");
 
                 //  primaryStage.close();
-            } else if (choice.equals("Medium - 10 Min")) {
+            } else if (choice.equals("Medium - 6 Min")) {
                 // Do something for the medium option
                 System.out.println("Medium");
 
 
                 // primaryStage.close();
-            } else if (choice.equals("Hard - 15 Min")) {
+            } else if (choice.equals("Hard - 9 Min")) {
                 // Do something for the hard option
                 System.out.println("Hard");
 
@@ -440,6 +375,3 @@ class DurDiff extends Application {
         });
     }
 }
-
-
-// to get this to work, you need to have the javafx libraries included and make sure that you set up the VM options to use those libraries
