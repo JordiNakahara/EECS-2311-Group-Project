@@ -11,9 +11,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import java.net.URL;
 
 public class MainGUI extends Application {
 
@@ -21,7 +21,7 @@ public class MainGUI extends Application {
     public void start(Stage primaryStage) {
         // Create the buttons
         Button userProfileBtn = new Button("User Profile");
-        Button workoutsBtn = new Button("Workouts");
+        Button workoutsBtn = new Button("Workouts"); 
 
         // Attach event handlers to the buttons
         userProfileBtn.setOnAction(e -> {
@@ -118,7 +118,7 @@ class WorkoutsGUI extends Application {
             Stage chestStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Chest";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\CHEST.png";
+            testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/CHEST.png";
             try {
                 testGUI.start(chestStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -132,7 +132,7 @@ class WorkoutsGUI extends Application {
             Stage armStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Arms";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ARM.png";
+            testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/ARMS%20.png";
             try {
                 testGUI.start(armStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -146,7 +146,7 @@ class WorkoutsGUI extends Application {
             Stage abStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Abs";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ABS.png";
+            testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/ABS.png";
             try {
                 testGUI.start(abStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -160,7 +160,7 @@ class WorkoutsGUI extends Application {
             Stage legStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Legs";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\LEGS.png";
+            testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/LEGS.png";
             try {
                 testGUI.start(legStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -174,7 +174,7 @@ class WorkoutsGUI extends Application {
             Stage cardioStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Cardio";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\CARDIO.png";
+            testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/CARDIO.png";
             try {
                 testGUI.start(cardioStage);
             } catch (FileNotFoundException fileNotFoundException) {
@@ -246,9 +246,9 @@ class WorkoutStartGUI extends Application {
         combobox2.getItems().add("Choice 2");
         combobox2.getItems().add("Choice 3");
 
-        InputStream stream = new FileInputStream(this.image);
-        Image image = new Image(stream);
-        ImageView view = new ImageView();
+        //InputStream stream = new FileInputStream(this.image);
+        Image image = new Image(this.image);
+        ImageView view = new ImageView(image);
         view.setImage(image);
         view.setX(400);
         view.setY(100);
