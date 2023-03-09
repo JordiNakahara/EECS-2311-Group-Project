@@ -1,5 +1,3 @@
-package eecs2311gui;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -13,6 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -133,7 +132,7 @@ class WorkoutsGUI extends Application {
             Stage armStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Arms";
-            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ARMS.png";
+            testGUI.image = "C:\\Users\\harjo\\Documents\\2311 PROJECT STUFF\\Workout Icons\\ARM.png";
             try {
                 testGUI.start(armStage);
             } catch (FileNotFoundException fileNotFoundException) {
