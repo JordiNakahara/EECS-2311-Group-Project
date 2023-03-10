@@ -12,6 +12,6 @@
 ## For this iteration we have decided to implement the following small user stories
 1. Save and read user profile from MySQL database (Jordi Nakahara 5 days)
 2. Read exercise data from database (Jordi Nakahara 2 days)
-3. A workout start GUI
-4. A workout GUI
-5. A timer for the exercise
+3. A workout start GUI (Harrish Elango 5 days)
+4. A workout GUI (Gaurav Moturi and Harjot Thandi 5 days)
+5. A timer for the exercise (Zinah Al-Loos 3 days
