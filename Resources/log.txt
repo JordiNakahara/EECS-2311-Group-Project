@@ -149,3 +149,6 @@
   - Moved old files to Oldfiles folder to organize project
   - Created ITR2README.md and added the updated plan
   
+## Harrish's Commits
+  - Helped the other members with their coding assignments for 4 hours.
+  
