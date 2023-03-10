@@ -12,8 +12,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.net.URL;
 
@@ -219,9 +221,9 @@ class WorkoutStartGUI extends Application {
     public void start(Stage primaryStage) throws FileNotFoundException {
 
         VBox root = new VBox(20);
-        ComboBox combobox = new ComboBox();        
-        ComboBox combobox1 = new ComboBox();
-        ComboBox combobox2 = new ComboBox();
+        ComboBox<String> combobox = new ComboBox<String>();        
+        ComboBox<String> combobox1 = new ComboBox<String>();
+        ComboBox<String> combobox2 = new ComboBox<String>();
         combobox.setPromptText("Exercise 1");
         combobox1.setPromptText("Exercise 2");
         combobox2.setPromptText("Exercise 3");
@@ -465,13 +467,39 @@ class workoutInProgress extends Application {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
 		} else if (choice.equals("Pike Push-Up")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
+		} else if (choice.equals("Situps")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
+		} else if (choice.equals("Plank")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
+		} else if (choice.equals("Russian Twists")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
+		} else if (choice.equals("Bicycle crunch")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
+		} else if (choice.equals("Squats")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Squats.gif";
+		} else if (choice.equals("Lunges")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/LUNGES.gif";
+		} else if (choice.equals("Run On The Spot")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Run%20on%20the%20spot.gif";
+		} else if (choice.equals("Burpees")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Burpees.gif";
+		} else if (choice.equals("Jumping Jacks")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Jumping%20Jacks.gif";
+		} else if (choice.equals("Mountain Climbers")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Mountain%20climbers.gif";
+		} else if (choice.equals("High knees")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/High%20knees.gif";
+		} else if (choice.equals("Reverse Kick Lunge")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/High%20knees.gif";
+		} else if (choice.equals("Calf Raises")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Calf%20Raises.gif";
 		}
-
+		
 		Image Gif1 = new Image(this.gif1);
 		ImageView view = new ImageView(Gif1);
 		view.setImage(Gif1);
-		view.setX(400);
-		view.setY(100);
+		view.setX(150);
+		view.setY(75);
 		view.setFitWidth(150);
 		view.setPreserveRatio(true);
 
