@@ -150,5 +150,5 @@
   - Created ITR2README.md and added the updated plan
   
 ## Harrish's Commits
-  - Helped the other members with their coding assignments for 4 hours.
+  - Helped other members with their coding assignments for 4 hours.
   
