@@ -78,7 +78,8 @@ public class UserDatabase {
 			String command = "SELECT * FROM userdata;";
 			System.out.println(command);
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = "First name: " + rs.getString("first_name") + "\n" + "Last name: " + rs.getString("last_name")
 					+ "\n" + "Gender: " + rs.getString("gender") + "\n" + "Weight: " + rs.getString("weight") + "\n"
 					+ "Height: " + rs.getString("height") + "\n" + "Age: " + rs.getString("age") + "\n" + "BMR: "
@@ -121,10 +122,12 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("first_name");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
+			System.out.println(e.getMessage());
 		}
 
 		return output;
@@ -159,7 +162,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("last_name");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
@@ -198,7 +202,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			temp = rs.getString("gender");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
@@ -237,7 +242,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("weight");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
@@ -276,7 +282,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("height");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
@@ -316,7 +323,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("age");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
@@ -355,7 +363,8 @@ public class UserDatabase {
 
 			String command = "SELECT * FROM userdata;";
 			ResultSet rs = state.executeQuery(command);
-
+			
+			rs.next();
 			output = rs.getString("bmr");
 		} catch (Exception e) {
 			System.out.println("Could not retreive user data from table");
