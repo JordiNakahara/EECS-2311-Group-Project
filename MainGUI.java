@@ -1,7 +1,5 @@
 package eecs2311gui;
 
-package blah;
-
 import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.geometry.Pos;
