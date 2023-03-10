@@ -1,5 +1,3 @@
-package EECS2311;
-
 import java.sql.*;
 import java.util.Scanner;
 import java.io.File;
@@ -35,6 +33,13 @@ public class SQLIntialization {
 		}
 		
 		try {
+			command = "drop database fitnessapp;";
+			state.execute(command);
+		} catch (Exception e) {
+			System.out.println("Could not clear database");
+		}
+		
+		try {
 			command = "create database fitnessapp;";
 			state.execute(command);
 		} catch (Exception e) {
@@ -42,19 +47,6 @@ public class SQLIntialization {
 			System.out.println(command);
 		}
 		
-		try {
-			command = "create user 'fitnessapp'@'localhost' identified by 'EECS2311'";
-			state.execute(command);
-		} catch (Exception e) {
-			System.out.println(command);
-		}
-		
-		try {
-			command = "grant all privileges on *fitnessapp* to 'fitnessapp' @ 'localhost';";
-			state.execute(command);
-		} catch (Exception e) {
-			System.out.println(command);
-		}
 		
 		try {
 			command = "use fitnessapp;";
@@ -63,6 +55,31 @@ public class SQLIntialization {
 			state.execute(command);
 		} catch (Exception e) {
 			System.out.println("Something went wrong!");
+			System.out.println(command);
+		}
+		
+		try {
+			command = "create table arms(name varchar(100), duration decimal (10, 5));";
+			state.execute(command);
+			command = "create table abs(name varchar(100), duration decimal (10, 5));";
+			state.execute(command);
+			command = "create table legs(name varchar(100), duration decimal (10, 5));";
+			state.execute(command);
+			command = "create table chest(name varchar(100), duration decimal (10, 5));";
+			state.execute(command);
+			command = "create table cardio(name varchar(100), duration decimal (10, 5));";
+			state.execute(command);
+		} catch (Exception e) {
+			System.out.println(command);
+		}
+		
+		try {
+			command = "insert into arms(name) values ('tricep dips'), ('inch worms'), ('plank push up'), ('plank walk'), ('extended plank hold');";
+			command = "insert into abs(name) values ('situps'), ('plank'), ('russian twists'), ('v sit'), ('bicycle crunch');";
+			command = "insert into legs(name) values ('squats'), ('lunges'), ('flutter kicks'), ('calf raises'), ('run on the spot');";
+			command = "insert into chest(name) values ('pike push-up'), ('dive bomber push-up'), ('shoulder taps'), ('wide grip push-up'), ('elevated push-up');";
+			command = "insert into cardio(name) values ('burpees'), ('jumping jacks'), ('mountain climbers'), ('high knees'), ('reverse kick lunge');";
+		} catch (Exception e) {
 			System.out.println(command);
 		}
 		
