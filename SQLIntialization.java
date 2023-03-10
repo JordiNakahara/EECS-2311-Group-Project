@@ -33,7 +33,8 @@ public class SQLIntialization {
 		}
 		
 		try {
-			command = "drop database fitnessapp;";
+			command = "use fitnessapp;";
+			command = "DROP DATABASE fitnessapp;";
 			state.execute(command);
 		} catch (Exception e) {
 			System.out.println("Could not clear database");
