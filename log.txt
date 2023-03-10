@@ -135,4 +135,7 @@
 ##Harjot's Commits
   - Uplaoded workout pdf including all workouts and combos, uploaded Gifs for workouts, uploaded highlighted skeleton and concept video. - this took about 2 hours
 
+##Harjot's Commits
+  - Uplaoded mainGUI, addded all exercises under their specific group and got started on the workouts page. - this took about 5 hours
+
   
