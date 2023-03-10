@@ -21,17 +21,16 @@ public class SQLIntialization {
 			writer.write(password);
 			writer.close();
 		} catch (Exception e) {
-
+			System.out.println("File already exists");
 		}
-		
-		
+
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			state = con.createStatement();
 		} catch (Exception e) {
 			System.out.println("Something went wrong. The password may be incorrect.");
 		}
-		
+
 		try {
 			command = "use fitnessapp;";
 			command = "DROP DATABASE fitnessapp;";
@@ -39,7 +38,7 @@ public class SQLIntialization {
 		} catch (Exception e) {
 			System.out.println("Could not clear database");
 		}
-		
+
 		try {
 			command = "create database fitnessapp;";
 			state.execute(command);
@@ -47,8 +46,7 @@ public class SQLIntialization {
 			System.out.println("Something went wrong!");
 			System.out.println(command);
 		}
-		
-		
+
 		try {
 			command = "use fitnessapp;";
 			state.execute(command);
@@ -58,33 +56,39 @@ public class SQLIntialization {
 			System.out.println("Something went wrong!");
 			System.out.println(command);
 		}
-		
+
 		try {
-			command = "create table arms(name varchar(100), duration decimal (10, 5));";
+			command = "create table arms(name varchar(100));";
 			state.execute(command);
-			command = "create table abs(name varchar(100), duration decimal (10, 5));";
+			command = "create table abs(name varchar(100));";
 			state.execute(command);
-			command = "create table legs(name varchar(100), duration decimal (10, 5));";
+			command = "create table legs(name varchar(100));";
 			state.execute(command);
-			command = "create table chest(name varchar(100), duration decimal (10, 5));";
+			command = "create table chest(name varchar(100));";
 			state.execute(command);
-			command = "create table cardio(name varchar(100), duration decimal (10, 5));";
+			command = "create table cardio(name varchar(100));";
 			state.execute(command);
 		} catch (Exception e) {
 			System.out.println(command);
 		}
-		
+
 		try {
 			command = "insert into arms(name) values ('tricep dips'), ('inch worms'), ('plank push up'), ('plank walk'), ('extended plank hold');";
+			state.execute(command);
 			command = "insert into abs(name) values ('situps'), ('plank'), ('russian twists'), ('v sit'), ('bicycle crunch');";
+			state.execute(command);
 			command = "insert into legs(name) values ('squats'), ('lunges'), ('flutter kicks'), ('calf raises'), ('run on the spot');";
+			state.execute(command);
 			command = "insert into chest(name) values ('pike push-up'), ('dive bomber push-up'), ('shoulder taps'), ('wide grip push-up'), ('elevated push-up');";
+			state.execute(command);
 			command = "insert into cardio(name) values ('burpees'), ('jumping jacks'), ('mountain climbers'), ('high knees'), ('reverse kick lunge');";
+			state.execute(command);
+			System.out.println("Success");
 		} catch (Exception e) {
 			System.out.println(command);
 		}
-		
+
 		sc.close();
 	}
-	
+
 }
