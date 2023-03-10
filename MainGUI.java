@@ -362,6 +362,9 @@ class WorkoutStartGUI extends Application {
                 // Create a new window for the user profile GUI
                 Stage difficultyStage = new Stage();
                 DurDiff durDiffSet = new DurDiff();
+                durDiffSet.choice = choice;
+                durDiffSet.choice1 = choice1;
+                durDiffSet.choice2 = choice2;
                 durDiffSet.type = this.type;
                 durDiffSet.start(difficultyStage);
                 primaryStage.close();
@@ -393,68 +396,187 @@ class WorkoutStartGUI extends Application {
     }
 }
 
+class workoutInProgress extends Application {
+
+	public String type;
+	public String choice;
+	public String choice1;
+	public String choice2;
+	String gif1;
+
+	public void start(Stage workoutInProgress) {
+		VBox root = new VBox(20);
+		HBox hbox = new HBox(20);
+
+		Text Space = new Text();
+		String text0 = "";
+		Text WorkoutText = new Text();
+		String text = "Workout";
+		Text WorkoutText1 = new Text();
+		String text1 = "Alternate Workout";
+
+		Button quitButton = new Button("Quit");
+		Button testButton = new Button("Test");
+
+		quitButton.setOnAction(e -> {
+			// Create a new window for the user profile GUI
+			Stage workoutsStage = new Stage();
+			WorkoutsGUI workoutsGUI = new WorkoutsGUI();
+			workoutsGUI.start(workoutsStage);
+			workoutInProgress.close();
+		});
+
+		testButton.setOnAction(e -> {
+			// Create a new window for the user profile GUI
+			System.out.println(this.choice);
+			System.out.println(this.choice1);
+			System.out.println(this.choice2);
+		});
+
+		root.getChildren().add(quitButton);
+
+		root.getChildren().add(testButton);
+
+		quitButton.setTranslateX(0);
+		quitButton.setTranslateY(0);
+
+		testButton.setTranslateX(15);
+		testButton.setTranslateY(15);
+
+		Space.setText(text0);
+		Space.setTranslateX(100);
+		Space.setTranslateY(0);
+
+		WorkoutText.setText(text);
+		WorkoutText.setTranslateX(150);
+		WorkoutText.setTranslateY(0);
+
+		WorkoutText1.setText(text1);
+		WorkoutText1.setTranslateX(275);
+		WorkoutText1.setTranslateY(0);
+
+		if (choice.equals("Dive-Bomber Push-Up")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
+		} else if (choice.equals("Shoulder Taps")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
+		} else if (choice.equals("Wide Grip Pushup")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
+		} else if (choice.equals("Elevated Pushup")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
+		} else if (choice.equals("Pike Push-Up")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
+		}
+
+		Image Gif1 = new Image(this.gif1);
+		ImageView view = new ImageView(Gif1);
+		view.setImage(Gif1);
+		view.setX(400);
+		view.setY(100);
+		view.setFitWidth(150);
+		view.setPreserveRatio(true);
+
+		hbox.getChildren().addAll(Space, WorkoutText, WorkoutText1);
+		Group group = new Group();
+		group.getChildren().add(root);
+		group.getChildren().add(hbox);
+		group.getChildren().add(view);
+
+		Scene scene = new Scene(group, 600, 400);
+		workoutInProgress.setTitle("Workout In Progress");
+		workoutInProgress.setScene(scene);
+		workoutInProgress.show();
+
+	}
+
+}
+
 class DurDiff extends Application {
-    
-    public String type;
 
-    public void start(Stage primaryStage) {
+	public String type;
+	public String choice;
+	public String choice1;
+	public String choice2;
 
-        VBox root = new VBox(20);
-        ComboBox<String> combobox = new ComboBox<String>();
-        combobox.setPromptText("Choose Difficulty/Duration");
-        combobox.getItems().add("Easy - 3 Min");
-        combobox.getItems().add("Medium - 6 Min");
-        combobox.getItems().add("Hard - 9 Min");
+	public void start(Stage primaryStage) {
 
-        Button nextButton = new Button("Continue");
-        Button backButton = new Button("Back");
+		VBox root = new VBox(20);
+		ComboBox<String> combobox = new ComboBox<String>();
+		combobox.setPromptText("Choose Difficulty/Duration");
+		combobox.getItems().add("Easy - 3 Min");
+		combobox.getItems().add("Medium - 6 Min");
+		combobox.getItems().add("Hard - 9 Min");
 
-        backButton.setOnAction(e -> {
-            // Create a new window for the user profile GUI
-            Stage workoutsStage = new Stage();
-            WorkoutsGUI workoutsGUI = new WorkoutsGUI();
-            workoutsGUI.start(workoutsStage);
-            primaryStage.close();
-        });
+		Button nextButton = new Button("Continue");
+		Button backButton = new Button("Back");
 
-        root.getChildren().add(backButton);
-        root.getChildren().addAll(combobox,nextButton);
-        backButton.setTranslateX(0);
-        backButton.setTranslateY(0);
-        combobox.setTranslateX(215);
-        combobox.setTranslateY(100);
-        nextButton.setTranslateX(275);
-        nextButton.setTranslateY(100);
+		backButton.setOnAction(e -> {
+			// Create a new window for the user profile GUI
+			Stage workoutsStage = new Stage();
+			WorkoutsGUI workoutsGUI = new WorkoutsGUI();
+			workoutsGUI.start(workoutsStage);
+			primaryStage.close();
+		});
 
-        Scene scene = new Scene(root, 600, 400);
+		root.getChildren().add(backButton);
+		root.getChildren().addAll(combobox, nextButton);
+		backButton.setTranslateX(0);
+		backButton.setTranslateY(0);
+		combobox.setTranslateX(215);
+		combobox.setTranslateY(100);
+		nextButton.setTranslateX(275);
+		nextButton.setTranslateY(100);
 
-        primaryStage.setTitle("Duration/Difficulty");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+		Scene scene = new Scene(root, 600, 400);
 
-        nextButton.setOnAction(e -> {
-            String choice = (String) combobox.getValue();
-            if (choice.equals("Easy - 3 Min")) {
-       
-                System.out.println("Easy");
+		primaryStage.setTitle("Duration/Difficulty");
+		primaryStage.setScene(scene);
+		primaryStage.show();
 
-                //  primaryStage.close();
-            } else if (choice.equals("Medium - 6 Min")) {
-                // Do something for the medium option
-                System.out.println("Medium");
+		nextButton.setOnAction(e -> {
+			String choice = (String) combobox.getValue();
+			if (choice.equals("Easy - 3 Min")) {
 
+				System.out.println("Easy");
 
-                // primaryStage.close();
-            } else if (choice.equals("Hard - 9 Min")) {
-                // Do something for the hard option
-                System.out.println("Hard");
+				Stage stage = new Stage();
+				workoutInProgress workoutsGUI = new workoutInProgress();
+				workoutsGUI.choice = this.choice;
+				workoutsGUI.choice1 = this.choice1;
+				workoutsGUI.choice2 = this.choice2;
+				workoutsGUI.start(stage);
+				primaryStage.close();
 
+				// primaryStage.close();
+			} else if (choice.equals("Medium - 6 Min")) {
+				// Do something for the medium option
+				System.out.println("Medium");
 
-                //  primaryStage.close();
-            } else {
-                // Do Nothing
+				Stage stage = new Stage();
+				workoutInProgress workoutsGUI = new workoutInProgress();
+				workoutsGUI.choice = this.choice;
+				workoutsGUI.choice1 = this.choice1;
+				workoutsGUI.choice2 = this.choice2;
+				workoutsGUI.start(stage);
+				primaryStage.close();
 
-            }
-        });
-    }
+				// primaryStage.close();
+			} else if (choice.equals("Hard - 9 Min")) {
+				// Do something for the hard option
+				System.out.println("Hard");
+
+				Stage stage = new Stage();
+				workoutInProgress workoutsGUI = new workoutInProgress();
+				workoutsGUI.choice = this.choice;
+				workoutsGUI.choice1 = this.choice1;
+				workoutsGUI.choice2 = this.choice2;
+				workoutsGUI.start(stage);
+				primaryStage.close();
+
+				// primaryStage.close();
+			} else {
+				// Do Nothing
+
+			}
+		});
+	}
 }
