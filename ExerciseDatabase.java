@@ -17,6 +17,8 @@ public class ExerciseDatabase {
 		File databasePassword = new File("rootinfo.txt");
 		ResultSet rs = null;
 		Statement state = null;
+		exerciseType = exerciseType.toLowerCase();
+		exercise = exercise.toLowerCase();
 		
 		//Read root password to login
 		try {
