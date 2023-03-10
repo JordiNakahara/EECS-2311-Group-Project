@@ -1,7 +1,6 @@
 package eecs2311gui;
 
 import java.io.FileNotFoundException;
-import java.io.FileNotFoundException;
 import java.io.FileInputStream;
 
 import javafx.application.Application;
@@ -16,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import java.net.URL;
 
 
 public class MainGUI extends Application {
@@ -114,181 +114,15 @@ class WorkoutsGUI extends Application {
             MainGUI mainGUI = new MainGUI();
             mainGUI.start(welcomeStage);
             primaryStage.close();
-        });
-        
-        VBox root1 = new VBox(20);
-    	ComboBox<String> comboboxArm = new ComboBox<String>();
-    	comboboxArm.setPromptText("Arms exercise 1");
-    	comboboxArm.getItems().add("Tricep Dips");
-    	comboboxArm.getItems().add("Inch Worms");
-    	comboboxArm.getItems().add("Plank Push Up");
-    	comboboxArm.getItems().add("Plank Walk");
-    	comboboxArm.getItems().add("Extended Plank Hold");
-    	
-    	VBox root11 = new VBox(20);
-    	ComboBox<String> comboboxArm1 = new ComboBox<String>();
-    	comboboxArm1.setPromptText("Arms exercise 2");
-    	comboboxArm1.getItems().add("Tricep Dips");
-    	comboboxArm1.getItems().add("Inch Worms");
-    	comboboxArm1.getItems().add("Plank Push Up");
-    	comboboxArm1.getItems().add("Plank Walk");
-    	comboboxArm1.getItems().add("Extended Plank Hold");
-    	
-    	VBox root111 = new VBox(20);
-    	ComboBox<String> comboboxArm2 = new ComboBox<String>();
-    	comboboxArm2.setPromptText("Arms exercise 2");
-    	comboboxArm2.getItems().add("Tricep Dips");
-    	comboboxArm2.getItems().add("Inch Worms");
-    	comboboxArm2.getItems().add("Plank Push Up");
-    	comboboxArm2.getItems().add("Plank Walk");
-    	comboboxArm2.getItems().add("Extended Plank Hold");
-    	
-    	VBox root2 = new VBox(20);
-    	ComboBox<String> comboboxAbs = new ComboBox<String>();
-    	comboboxAbs.setPromptText("Abs exercise 1");
-    	comboboxAbs.getItems().add("Plank");
-    	comboboxAbs.getItems().add("Russian Twists");
-    	comboboxAbs.getItems().add("V Sitt");
-    	comboboxAbs.getItems().add("Bicycle Crunch");
-    	comboboxAbs.getItems().add("Squats");
-    	
-    	VBox root22 = new VBox(20);
-    	ComboBox<String> comboboxAbs1 = new ComboBox<String>();
-    	comboboxAbs1.setPromptText("Abs exercise 1");
-    	comboboxAbs1.getItems().add("Plank");
-    	comboboxAbs1.getItems().add("Russian Twists");
-    	comboboxAbs1.getItems().add("V Sitt");
-    	comboboxAbs1.getItems().add("Bicycle Crunch");
-    	comboboxAbs1.getItems().add("Squats");
-    	
-    	VBox root222 = new VBox(20);
-    	ComboBox<String> comboboxAbs2 = new ComboBox<String>();
-    	comboboxAbs2.setPromptText("Abs exercise 1");
-    	comboboxAbs2.getItems().add("Plank");
-    	comboboxAbs2.getItems().add("Russian Twists");
-    	comboboxAbs2.getItems().add("V Sitt");
-    	comboboxAbs2.getItems().add("Bicycle Crunch");
-    	comboboxAbs2.getItems().add("Squats");
-
-    	VBox root3 = new VBox(20);
-    	ComboBox<String> comboboxLegs = new ComboBox<String>();
-    	comboboxLegs.setPromptText("Legs exercise 1");
-    	comboboxLegs.getItems().add("Lunges");
-    	comboboxLegs.getItems().add("Flutter Kicks");
-    	comboboxLegs.getItems().add("Calf Raises");
-    	comboboxLegs.getItems().add("Run on the Spot");
-    	comboboxLegs.getItems().add("Squats");
-    	
-    	VBox root33 = new VBox(20);
-    	ComboBox<String> comboboxLegs1 = new ComboBox<String>();
-    	comboboxLegs1.setPromptText("Legs exercise 2");
-    	comboboxLegs1.getItems().add("Lunges");
-    	comboboxLegs1.getItems().add("Flutter Kicks");
-    	comboboxLegs1.getItems().add("Calf Raises");
-    	comboboxLegs1.getItems().add("Run on the Spot");
-    	comboboxLegs1.getItems().add("Squats");
-    	
-    	VBox root333 = new VBox(20);
-    	ComboBox<String> comboboxLegs2 = new ComboBox<String>();
-    	comboboxLegs2.setPromptText("Legs exercise 3");
-    	comboboxLegs2.getItems().add("Lunges");
-    	comboboxLegs2.getItems().add("Flutter Kicks");
-    	comboboxLegs2.getItems().add("Calf Raises");
-    	comboboxLegs2.getItems().add("Run on the Spot");
-    	comboboxLegs2.getItems().add("Squats");
-
-    	VBox root4 = new VBox(20);
-    	ComboBox<String> comboboxChest = new ComboBox<String>();
-    	comboboxChest.setPromptText("Chest exercise 1");
-    	comboboxChest.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest.getItems().add("Shoulder Taps");
-    	comboboxChest.getItems().add("Wide Grip Pushup");
-    	comboboxChest.getItems().add("Elevated Pushup");
-    	comboboxChest.getItems().add("Pike Push-Up");
-    	
-    	VBox root44 = new VBox(20);
-    	ComboBox<String> comboboxChest1 = new ComboBox<String>();
-    	comboboxChest1.setPromptText("Chest exercise 2");
-    	comboboxChest1.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest1.getItems().add("Shoulder Taps");
-    	comboboxChest1.getItems().add("Wide Grip Pushup");
-    	comboboxChest1.getItems().add("Elevated Pushup");
-    	comboboxChest1.getItems().add("Pike Push-Up");
-    	
-    	VBox root444 = new VBox(20);
-    	ComboBox<String> comboboxChest2 = new ComboBox<String>();
-    	comboboxChest2.setPromptText("Chest exercise 3");
-    	comboboxChest2.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest2.getItems().add("Shoulder Taps");
-    	comboboxChest2.getItems().add("Wide Grip Pushup");
-    	comboboxChest2.getItems().add("Elevated Pushup");
-    	comboboxChest2.getItems().add("Pike Push-Up");
-    	
-    	
-
-    	VBox root5 = new VBox(20);
-    	ComboBox<String> comboboxCardio = new ComboBox<String>();
-    	comboboxCardio.setPromptText("Cardio exercise 1");
-    	comboboxCardio.getItems().add("Jumping Jacks");
-    	comboboxCardio.getItems().add("Mountain Climbers");
-    	comboboxCardio.getItems().add("High Knees");
-    	comboboxCardio.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio.getItems().add("Burpees");
-    	
-    	VBox root55 = new VBox(20);
-    	ComboBox<String> comboboxCardio1 = new ComboBox<String>();
-    	comboboxCardio1.setPromptText("Cardio exercise 1");
-    	comboboxCardio1.getItems().add("Jumping Jacks");
-    	comboboxCardio1.getItems().add("Mountain Climbers");
-    	comboboxCardio1.getItems().add("High Knees");
-    	comboboxCardio1.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio1.getItems().add("Burpees");
-
-    	VBox root555 = new VBox(20);
-    	ComboBox<String> comboboxCardio2 = new ComboBox<String>();
-    	comboboxCardio2.setPromptText("Cardio exercise 1");
-    	comboboxCardio2.getItems().add("Jumping Jacks");
-    	comboboxCardio2.getItems().add("Mountain Climbers");
-    	comboboxCardio2.getItems().add("High Knees");
-    	comboboxCardio2.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio2.getItems().add("Burpees");
-
-        
-    	comboboxArm.setVisible(false);
-    	comboboxArm1.setVisible(false);
-    	comboboxArm2.setVisible(false);
-
-        comboboxAbs.setVisible(false);
-        comboboxAbs1.setVisible(false);
-        comboboxAbs2.setVisible(false);
-
-        comboboxLegs.setVisible(false);
-        comboboxLegs1.setVisible(false);
-        comboboxLegs2.setVisible(false);
-
-        comboboxChest.setVisible(false);
-        comboboxChest1.setVisible(false);
-        comboboxChest2.setVisible(false);
-      
-        comboboxCardio.setVisible(false);
-        comboboxCardio1.setVisible(false);
-        comboboxCardio2.setVisible(false);
-
-
-      
+        });        
        
-
-
         chestButton.setOnAction(e -> {
             // Create a new window for the user profile GUI
             Stage chestStage = new Stage();
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Chest";
             testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/CHEST.png";
-        	comboboxChest.setVisible(true);
-        	comboboxChest1.setVisible(true);
-        	comboboxChest2.setVisible(true);
-            try {
+        	try {
                 testGUI.start(chestStage);
             } catch (FileNotFoundException fileNotFoundException) {
                 fileNotFoundException.printStackTrace();
@@ -302,10 +136,7 @@ class WorkoutsGUI extends Application {
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Arms";
             testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/ARMS%20.png";
-        	comboboxArm.setVisible(true);
-        	comboboxArm1.setVisible(true);
-        	comboboxArm2.setVisible(true);
-            try {
+        	try {
                 testGUI.start(armStage);
             } catch (FileNotFoundException fileNotFoundException) {
                 fileNotFoundException.printStackTrace();
@@ -319,10 +150,7 @@ class WorkoutsGUI extends Application {
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Abs";
             testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/ABS.png";
-        	comboboxAbs.setVisible(true);
-        	comboboxAbs1.setVisible(true);
-        	comboboxAbs2.setVisible(true);
-            try {
+        	try {
                 testGUI.start(abStage);
             } catch (FileNotFoundException fileNotFoundException) {
                 fileNotFoundException.printStackTrace();
@@ -336,10 +164,7 @@ class WorkoutsGUI extends Application {
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Legs";
             testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/LEGS.png";
-        	comboboxLegs.setVisible(true);
-        	comboboxLegs1.setVisible(true);
-        	comboboxLegs2.setVisible(true);
-            try {
+        	try {
                 testGUI.start(legStage);
             } catch (FileNotFoundException fileNotFoundException) {
                 fileNotFoundException.printStackTrace();
@@ -353,10 +178,7 @@ class WorkoutsGUI extends Application {
             WorkoutStartGUI testGUI = new WorkoutStartGUI();
             testGUI.type = "Cardio";
             testGUI.image = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/CARDIO.png";
-        	comboboxCardio.setVisible(true);
-        	comboboxCardio1.setVisible(true);
-        	comboboxCardio2.setVisible(true);
-            try {
+        	try {
                 testGUI.start(cardioStage);
             } catch (FileNotFoundException fileNotFoundException) {
                 fileNotFoundException.printStackTrace();
@@ -364,16 +186,8 @@ class WorkoutsGUI extends Application {
             primaryStage.close();
         });
 
-        /*comboButton.setOnAction(e -> {
-            // Create a new window for the user profile GUI
-            Stage welcomeStage = new Stage();
-            MainGUI mainGUI = new MainGUI();
-            mainGUI.start(welcomeStage);
-            primaryStage.close();
-        }); */
-
-        root1.getChildren().add(backButton);
-        root1.getChildren().addAll(chestButton, armsButton, absButton, legsButton, cardioButton);
+        root.getChildren().add(backButton);
+        root.getChildren().addAll(chestButton, armsButton, absButton, legsButton, cardioButton);
         backButton.setTranslateX(0);
         backButton.setTranslateY(0);
         chestButton.setTranslateX(265);
@@ -387,10 +201,8 @@ class WorkoutsGUI extends Application {
         cardioButton.setTranslateX(265);
         cardioButton.setTranslateY(50);
 
-
-
         // Create a scene and set the root node
-        Scene scene = new Scene(root1, 600, 400);
+        Scene scene = new Scene(root, 600, 400);
 
         // Set the stage's title and scene, and show the stage
         primaryStage.setTitle("Workouts");
@@ -405,165 +217,116 @@ class WorkoutStartGUI extends Application {
     public String image;
 
     public void start(Stage primaryStage) throws FileNotFoundException {
-    	
-//        VBox root = new VBox(20);
-//        ComboBox<String> combobox = new ComboBox<String>();
-//        combobox.setPromptText("Exercise 1");
-//        combobox.getItems().add("Choice 1");
-//        combobox.getItems().add("Choice 2");
-//        combobox.getItems().add("Choice 3");
-//
-//
-//        ComboBox<String> comboboxAbs = new ComboBox<String>();
-//        comboboxAbs.setPromptText("Exercise 2");
-//        comboboxAbs.getItems().add("Choice 1");
-//        comboboxAbs.getItems().add("Choice 2");
-//        comboboxAbs.getItems().add("Choice 3");
-//
-//
-//        ComboBox<String> comboboxLegs = new ComboBox<String>();
-//        comboboxLegs.setPromptText("Exercise 3");
-//        comboboxLegs.getItems().add("Choice 1");
-//        comboboxLegs.getItems().add("Choice 2");
-//        comboboxLegs.getItems().add("Choice 3");
-    	
-    	VBox root1 = new VBox(20);
-    	ComboBox<String> comboboxArm = new ComboBox<String>();
-    	comboboxArm.setPromptText("Arms exercise 1");
-    	comboboxArm.getItems().add("Tricep Dips");
-    	comboboxArm.getItems().add("Inch Worms");
-    	comboboxArm.getItems().add("Plank Push Up");
-    	comboboxArm.getItems().add("Plank Walk");
-    	comboboxArm.getItems().add("Extended Plank Hold");
-    	
-    	VBox root11 = new VBox(20);
-    	ComboBox<String> comboboxArm1 = new ComboBox<String>();
-    	comboboxArm1.setPromptText("Arms exercise 2");
-    	comboboxArm1.getItems().add("Tricep Dips");
-    	comboboxArm1.getItems().add("Inch Worms");
-    	comboboxArm1.getItems().add("Plank Push Up");
-    	comboboxArm1.getItems().add("Plank Walk");
-    	comboboxArm1.getItems().add("Extended Plank Hold");
-    	
-    	VBox root111 = new VBox(20);
-    	ComboBox<String> comboboxArm2 = new ComboBox<String>();
-    	comboboxArm2.setPromptText("Arms exercise 2");
-    	comboboxArm2.getItems().add("Tricep Dips");
-    	comboboxArm2.getItems().add("Inch Worms");
-    	comboboxArm2.getItems().add("Plank Push Up");
-    	comboboxArm2.getItems().add("Plank Walk");
-    	comboboxArm2.getItems().add("Extended Plank Hold");
-    	
-    	VBox root2 = new VBox(20);
-    	ComboBox<String> comboboxAbs = new ComboBox<String>();
-    	comboboxAbs.setPromptText("Abs exercise 1");
-    	comboboxAbs.getItems().add("Plank");
-    	comboboxAbs.getItems().add("Russian Twists");
-    	comboboxAbs.getItems().add("V Sitt");
-    	comboboxAbs.getItems().add("Bicycle Crunch");
-    	comboboxAbs.getItems().add("Squats");
-    	
-    	VBox root22 = new VBox(20);
-    	ComboBox<String> comboboxAbs1 = new ComboBox<String>();
-    	comboboxAbs1.setPromptText("Abs exercise 1");
-    	comboboxAbs1.getItems().add("Plank");
-    	comboboxAbs1.getItems().add("Russian Twists");
-    	comboboxAbs1.getItems().add("V Sitt");
-    	comboboxAbs1.getItems().add("Bicycle Crunch");
-    	comboboxAbs1.getItems().add("Squats");
-    	
-    	VBox root222 = new VBox(20);
-    	ComboBox<String> comboboxAbs2 = new ComboBox<String>();
-    	comboboxAbs2.setPromptText("Abs exercise 1");
-    	comboboxAbs2.getItems().add("Plank");
-    	comboboxAbs2.getItems().add("Russian Twists");
-    	comboboxAbs2.getItems().add("V Sitt");
-    	comboboxAbs2.getItems().add("Bicycle Crunch");
-    	comboboxAbs2.getItems().add("Squats");
 
-    	VBox root3 = new VBox(20);
-    	ComboBox<String> comboboxLegs = new ComboBox<String>();
-    	comboboxLegs.setPromptText("Legs exercise 1");
-    	comboboxLegs.getItems().add("Lunges");
-    	comboboxLegs.getItems().add("Flutter Kicks");
-    	comboboxLegs.getItems().add("Calf Raises");
-    	comboboxLegs.getItems().add("Run on the Spot");
-    	comboboxLegs.getItems().add("Squats");
-    	
-    	VBox root33 = new VBox(20);
-    	ComboBox<String> comboboxLegs1 = new ComboBox<String>();
-    	comboboxLegs1.setPromptText("Legs exercise 2");
-    	comboboxLegs1.getItems().add("Lunges");
-    	comboboxLegs1.getItems().add("Flutter Kicks");
-    	comboboxLegs1.getItems().add("Calf Raises");
-    	comboboxLegs1.getItems().add("Run on the Spot");
-    	comboboxLegs1.getItems().add("Squats");
-    	
-    	VBox root333 = new VBox(20);
-    	ComboBox<String> comboboxLegs2 = new ComboBox<String>();
-    	comboboxLegs2.setPromptText("Legs exercise 3");
-    	comboboxLegs2.getItems().add("Lunges");
-    	comboboxLegs2.getItems().add("Flutter Kicks");
-    	comboboxLegs2.getItems().add("Calf Raises");
-    	comboboxLegs2.getItems().add("Run on the Spot");
-    	comboboxLegs2.getItems().add("Squats");
+        VBox root = new VBox(20);
+        ComboBox combobox = new ComboBox();        
+        ComboBox combobox1 = new ComboBox();
+        ComboBox combobox2 = new ComboBox();
+        combobox.setPromptText("Exercise 1");
+        combobox1.setPromptText("Exercise 2");
+        combobox2.setPromptText("Exercise 3");
+        
+        if(this.type.equals("Arms")) {        	
+        	
+        	combobox.getItems().add("Tricep Dips");
+        	combobox.getItems().add("Inch Worms");
+        	combobox.getItems().add("Plank Push Up");
+        	combobox.getItems().add("Plank Walk");
+        	combobox.getItems().add("Extended Plank Hold"); 
+        	
+        	combobox1.getItems().add("Tricep Dips");
+        	combobox1.getItems().add("Inch Worms");
+        	combobox1.getItems().add("Plank Push Up");
+        	combobox1.getItems().add("Plank Walk");
+        	combobox1.getItems().add("Extended Plank Hold");
+        	
+        	combobox2.getItems().add("Tricep Dips");
+        	combobox2.getItems().add("Inch Worms");
+        	combobox2.getItems().add("Plank Push Up");
+        	combobox2.getItems().add("Plank Walk");
+        	combobox2.getItems().add("Extended Plank Hold");        	
+        }
+        else if (this.type.equals("Abs")){    	
+        	
+        combobox.getItems().add("Plank");
+        combobox.getItems().add("Russian Twists");
+        combobox.getItems().add("V Sitt");
+        combobox.getItems().add("Bicycle Crunch");
+        combobox.getItems().add("Squats");
+            	
+        combobox1.getItems().add("Plank");
+        combobox1.getItems().add("Russian Twists");
+        combobox1.getItems().add("V Sitt");
+        combobox1.getItems().add("Bicycle Crunch");
+        combobox1.getItems().add("Squats");
+            	
+        combobox2.getItems().add("Plank");
+        combobox2.getItems().add("Russian Twists");
+        combobox2.getItems().add("V Sitt");
+        combobox2.getItems().add("Bicycle Crunch");
+        combobox2.getItems().add("Squats");
+        }
+            	
+        else if (this.type.equals("Legs")){
+        combobox.getItems().add("Lunges");
+        combobox.getItems().add("Flutter Kicks");
+        combobox.getItems().add("Calf Raises");
+        combobox.getItems().add("Run on the Spot");
+        combobox.getItems().add("Squats");
+            	
+        combobox1.getItems().add("Lunges");
+        combobox1.getItems().add("Flutter Kicks");
+        combobox1.getItems().add("Calf Raises");
+        combobox1.getItems().add("Run on the Spot");
+        combobox1.getItems().add("Squats");
+            	
+        combobox2.getItems().add("Lunges");
+        combobox2.getItems().add("Flutter Kicks");
+        combobox2.getItems().add("Calf Raises");
+        combobox2.getItems().add("Run on the Spot");
+        combobox2.getItems().add("Squats");
+        }
+            	
+        else if (this.type.equals("Chest")){
+        combobox.getItems().add("Dive-Bomber Push-Up");
+        combobox.getItems().add("Shoulder Taps");
+        combobox.getItems().add("Wide Grip Pushup");
+        combobox.getItems().add("Elevated Pushup");
+        combobox.getItems().add("Pike Push-Up");
+            	
+        combobox1.getItems().add("Dive-Bomber Push-Up");
+        combobox1.getItems().add("Shoulder Taps");
+        combobox1.getItems().add("Wide Grip Pushup");
+        combobox1.getItems().add("Elevated Pushup");
+        combobox1.getItems().add("Pike Push-Up");
+            	
+        combobox2.getItems().add("Dive-Bomber Push-Up");
+        combobox2.getItems().add("Shoulder Taps");
+        combobox2.getItems().add("Wide Grip Pushup");
+        combobox2.getItems().add("Elevated Pushup");
+        combobox2.getItems().add("Pike Push-Up");
+        }
+            	
+        else if (this.type.equals("Cardio")){
+        combobox.getItems().add("Jumping Jacks");
+        combobox.getItems().add("Mountain Climbers");
+        combobox.getItems().add("High Knees");
+        combobox.getItems().add("Reverse Kick Lunge");
+        combobox.getItems().add("Burpees");
+            	
+        combobox1.getItems().add("Jumping Jacks");
+        combobox1.getItems().add("Mountain Climbers");
+        combobox1.getItems().add("High Knees");
+        combobox1.getItems().add("Reverse Kick Lunge");
+        combobox1.getItems().add("Burpees");
 
-    	VBox root4 = new VBox(20);
-    	ComboBox<String> comboboxChest = new ComboBox<String>();
-    	comboboxChest.setPromptText("Chest exercise 1");
-    	comboboxChest.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest.getItems().add("Shoulder Taps");
-    	comboboxChest.getItems().add("Wide Grip Pushup");
-    	comboboxChest.getItems().add("Elevated Pushup");
-    	comboboxChest.getItems().add("Pike Push-Up");
-    	
-    	VBox root44 = new VBox(20);
-    	ComboBox<String> comboboxChest1 = new ComboBox<String>();
-    	comboboxChest1.setPromptText("Chest exercise 2");
-    	comboboxChest1.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest1.getItems().add("Shoulder Taps");
-    	comboboxChest1.getItems().add("Wide Grip Pushup");
-    	comboboxChest1.getItems().add("Elevated Pushup");
-    	comboboxChest1.getItems().add("Pike Push-Up");
-    	
-    	VBox root444 = new VBox(20);
-    	ComboBox<String> comboboxChest2 = new ComboBox<String>();
-    	comboboxChest2.setPromptText("Chest exercise 3");
-    	comboboxChest2.getItems().add("Dive-Bomber Push-Up");
-    	comboboxChest2.getItems().add("Shoulder Taps");
-    	comboboxChest2.getItems().add("Wide Grip Pushup");
-    	comboboxChest2.getItems().add("Elevated Pushup");
-    	comboboxChest2.getItems().add("Pike Push-Up");
-    	
-
-    	VBox root5 = new VBox(20);
-    	ComboBox<String> comboboxCardio = new ComboBox<String>();
-    	comboboxCardio.setPromptText("Cardio exercise 1");
-    	comboboxCardio.getItems().add("Jumping Jacks");
-    	comboboxCardio.getItems().add("Mountain Climbers");
-    	comboboxCardio.getItems().add("High Knees");
-    	comboboxCardio.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio.getItems().add("Burpees");
-    	
-    	VBox root55 = new VBox(20);
-    	ComboBox<String> comboboxCardio1 = new ComboBox<String>();
-    	comboboxCardio1.setPromptText("Cardio exercise 1");
-    	comboboxCardio1.getItems().add("Jumping Jacks");
-    	comboboxCardio1.getItems().add("Mountain Climbers");
-    	comboboxCardio1.getItems().add("High Knees");
-    	comboboxCardio1.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio1.getItems().add("Burpees");
-
-    	VBox root555 = new VBox(20);
-    	ComboBox<String> comboboxCardio2 = new ComboBox<String>();
-    	comboboxCardio2.setPromptText("Cardio exercise 1");
-    	comboboxCardio2.getItems().add("Jumping Jacks");
-    	comboboxCardio2.getItems().add("Mountain Climbers");
-    	comboboxCardio2.getItems().add("High Knees");
-    	comboboxCardio2.getItems().add("Reverse Kick Lunge");
-    	comboboxCardio2.getItems().add("Burpees");
-
-
+        combobox2.getItems().add("Jumping Jacks");
+        combobox2.getItems().add("Mountain Climbers");
+        combobox2.getItems().add("High Knees");
+        combobox2.getItems().add("Reverse Kick Lunge");
+        combobox2.getItems().add("Burpees");
+        }        
+        
         //InputStream stream = new FileInputStream(this.image);
         Image image = new Image(this.image);
         ImageView view = new ImageView(image);
@@ -574,7 +337,7 @@ class WorkoutStartGUI extends Application {
         view.setPreserveRatio(true);
         Group group = new Group();
         group.getChildren().add(view);
-        group.getChildren().add(root1);
+        group.getChildren().add(root);
 
         Button nextButton = new Button("Continue");
 
@@ -587,17 +350,11 @@ class WorkoutStartGUI extends Application {
             workoutsGUI.start(workoutsStage);
             primaryStage.close();
         });
-        
-        
 
         nextButton.setOnAction(e -> {
-            String choice = (String) comboboxArm.getValue();
-            String choice1 = (String) comboboxAbs.getValue();
-            String choice2 = (String) comboboxLegs.getValue();
-            String choice3 = (String) comboboxChest.getValue();
-            String choice4 = (String) comboboxCardio.getValue();
-
-            
+            String choice = (String) combobox.getValue();
+            String choice1 = (String) combobox1.getValue();
+            String choice2 = (String) combobox2.getValue();
             if (choice.equals("Exercise 1") || choice1.equals("Exercise 2") || choice2.equals("Exercise 3")){
                 //Do nothing
             }
@@ -611,21 +368,17 @@ class WorkoutStartGUI extends Application {
             //insert stage creation here to lead to the workouts page
         });
 
-        root1.getChildren().add(backButton);
-        root1.getChildren().addAll(comboboxArm, comboboxAbs, comboboxLegs, comboboxChest, comboboxCardio,nextButton);
+        root.getChildren().add(backButton);
+        root.getChildren().addAll(combobox, combobox1, combobox2,nextButton);
 
         backButton.setTranslateX(0);
         backButton.setTranslateY(0);
-        comboboxArm.setTranslateX(260);
-        comboboxArm.setTranslateY(50);
-        comboboxAbs.setTranslateX(260);
-        comboboxAbs.setTranslateY(50);
-        comboboxLegs.setTranslateX(260);
-        comboboxLegs.setTranslateY(50);
-        comboboxChest.setTranslateX(260);
-        comboboxChest.setTranslateY(50);
-        comboboxCardio.setTranslateX(260);
-        comboboxCardio.setTranslateY(50);
+        combobox.setTranslateX(260);
+        combobox.setTranslateY(50);
+        combobox1.setTranslateX(260);
+        combobox1.setTranslateY(50);
+        combobox2.setTranslateX(260);
+        combobox2.setTranslateY(50);
         nextButton.setTranslateX(275);
         nextButton.setTranslateY(50);
 
@@ -638,20 +391,6 @@ class WorkoutStartGUI extends Application {
 
     }
 }
-
-class workoutInProgress extends Application {
-
-	public void start(Stage workoutInProgress) {
-	      Stage primnaryStage = null;
-		primnaryStage.setTitle("Workout In Progress");
-	      StackPane Layout = new StackPane();
-	      Layout.getChildren();
-	      Scene scene = new Scene(Layout, 300, 200);
-	      workoutInProgress.setScene(scene);
-	      workoutInProgress.show();
-		}
-	
-	}
 
 class DurDiff extends Application {
 
