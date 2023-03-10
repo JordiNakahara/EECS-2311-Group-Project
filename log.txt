@@ -137,5 +137,15 @@
 
 ##Harjot's Commits
   - Uplaoded mainGUI, addded all exercises under their specific group and got started on the workouts page. - this took about 5 hours
+  
+##Jordi's Commits
+  - Changed the UserDatabase class to read and write from the sql database instead of the stub database
+  - Created a skeleton version of the exercise database
+ 
+#Day 12: Fri Mar 10 Log
+##Jordi's Commits
+  - Various bug fixes to exercise and user database clases as well as bug fixes to the SQL initialization class
+  - Created wiki file for help with project navigation
+  - Moved old files to Oldfiles folder to organize project
 
   
