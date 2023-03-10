@@ -362,6 +362,7 @@ class WorkoutStartGUI extends Application {
                 // Create a new window for the user profile GUI
                 Stage difficultyStage = new Stage();
                 DurDiff durDiffSet = new DurDiff();
+                durDiffSet.type = this.type;
                 durDiffSet.start(difficultyStage);
                 primaryStage.close();
             }
@@ -393,6 +394,8 @@ class WorkoutStartGUI extends Application {
 }
 
 class DurDiff extends Application {
+    
+    public String type;
 
     public void start(Stage primaryStage) {
 
