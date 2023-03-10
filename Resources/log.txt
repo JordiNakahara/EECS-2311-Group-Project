@@ -147,5 +147,5 @@
   - Various bug fixes to exercise and user database clases as well as bug fixes to the SQL initialization class
   - Created wiki file for help with project navigation
   - Moved old files to Oldfiles folder to organize project
-
+  - Created ITR2README.md and added the updated plan
   
