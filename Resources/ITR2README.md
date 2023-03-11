@@ -15,3 +15,7 @@
 3. A workout start GUI (Harrish Elango -Harjot Assisted with this 5 days)
 4. A workout GUI (Gaurav Moturi and Harjot Thandi 5 days)
 5. A timer for the exercise (Zinah Al-Loos 3 days
+
+
+## Notes for TA when grading
+ - Please grade the version that is 12 hours after the due date. We accept the 25% mark deduction.
