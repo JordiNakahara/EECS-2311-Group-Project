@@ -130,7 +130,10 @@
  
 #Day 10: Wed Mar 8 Log
 ##Harrish's Commits
-  - Updated MainGUI to have UserInputGUI work. Figured out how to use JFrame with Javafx. Figured out how to show images beside combo boxes in the workoutStartGUI. Adjusted location of most of the buttons and combo boxes to look cleaner. - This took about 4.5 hours to do.  
+  - Updated MainGUI to have UserInputGUI work. Figured out how to use JFrame with Javafx. Figured out how to show images beside combo boxes in the workoutStartGUI. Adjusted location of most of the buttons and combo boxes to look cleaner. - This took about 4.5 hours to do. 
+  
+## Gaurav's Commits
+  - Helped Harrish with UserInputGUI and Javafx for 5 hours.
 
 ##Harjot's Commits
   - Uplaoded workout pdf including all workouts and combos, uploaded Gifs for workouts, uploaded highlighted skeleton and concept video. - this took about 2 hours
@@ -151,4 +154,7 @@
   
 ## Harrish's Commits
   - Helped other members with their coding assignments for 4 hours.
+  
+## Gaurav's Commits
+  - Helped members with their coding assignments for 4 hours.
   
