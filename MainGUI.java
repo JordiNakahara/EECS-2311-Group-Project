@@ -860,23 +860,6 @@ class workoutInProgress extends Application {
 		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
-		if (choice.equals("Situps")) {
-		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice.equals("Plank")) {
-		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice.equals("Russian Twists")) {
-		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice.equals("V Sitt")) {
-		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/V%20sitt.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice.equals("Bicycle Crunch")) {
-		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		}
-		
 		if (choice.equals("Tricep Dips")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/tricep%20dip.gif";
 		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
