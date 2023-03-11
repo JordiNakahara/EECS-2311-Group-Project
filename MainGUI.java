@@ -1,5 +1,6 @@
 package eecs2311gui;
 
+
 import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -14,6 +15,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
 
 public class MainGUI extends Application {
 
@@ -87,7 +91,6 @@ class UserProfileGUI extends Application {
 		primaryStage.setTitle("User Profile");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-
 	}
 }
 
@@ -388,216 +391,7 @@ class WorkoutStartGUI extends Application {
 		primaryStage.setTitle(this.type);
 		primaryStage.setScene(scene);
 		primaryStage.show();
-
 	}
-}
-
-class workoutInProgress extends Application {
-
-	public String type;
-	public String choice;
-	public String choice1;
-	public String choice2;
-	String gif1;
-	String gif2;
-	String gif3;
-	String Altgif1;
-	String Altgif2;
-	String Altgif3;
-
-	public void start(Stage workoutInProgress) {
-		VBox root = new VBox(20);
-		HBox hbox = new HBox(20);
-
-		Text Space = new Text();
-		String text0 = "";
-		Text WorkoutText = new Text();
-		String text = "Workout";
-		Text WorkoutText1 = new Text();
-		String text1 = "Alternate Workout";
-
-		Button quitButton = new Button("Quit");
-		Button testButton = new Button("Test");
-
-		quitButton.setOnAction(e -> {
-			// Create a new window for the user profile GUI
-			Stage workoutsStage = new Stage();
-			WorkoutsGUI workoutsGUI = new WorkoutsGUI();
-			workoutsGUI.start(workoutsStage);
-			workoutInProgress.close();
-		});
-
-		testButton.setOnAction(e -> {
-			// Create a new window for the user profile GUI
-			System.out.println(this.choice);
-			System.out.println(this.choice1);
-			System.out.println(this.choice2);
-		});
-
-		root.getChildren().add(quitButton);
-
-		root.getChildren().add(testButton);
-
-		quitButton.setTranslateX(0);
-		quitButton.setTranslateY(0);
-
-		testButton.setTranslateX(15);
-		testButton.setTranslateY(15);
-
-		Space.setText(text0);
-		Space.setTranslateX(100);
-		Space.setTranslateY(0);
-
-		WorkoutText.setText(text);
-		WorkoutText.setTranslateX(150);
-		WorkoutText.setTranslateY(0);
-
-		WorkoutText1.setText(text1);
-		WorkoutText1.setTranslateX(275);
-		WorkoutText1.setTranslateY(0);
-
-		if (choice.equals("Dive-Bomber Push-Up")) {
-			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		} else if (choice.equals("Shoulder Taps")) {
-			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		} else if (choice.equals("Wide Grip Pushup")) {
-			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		} else if (choice.equals("Elevated Pushup")) {
-			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		} else if (choice.equals("Pike Push-Up")) {
-			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
-		}
-
-		Image Gif1 = new Image(this.gif1);
-		Image AltGif1 = new Image(this.Altgif1);
-		ImageView view = new ImageView(Gif1);
-		ImageView Altview = new ImageView(AltGif1);
-		view.setImage(Gif1);
-		view.setX(150);
-		view.setY(75);
-		view.setFitWidth(150);
-		view.setPreserveRatio(true);
-		Altview.setImage(AltGif1);
-		Altview.setX(275);
-		Altview.setY(75);
-		Altview.setFitWidth(150);
-		Altview.setPreserveRatio(true);
-		
-		
-		if (choice1.equals("Dive-Bomber Push-Up")) {
-			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice1.equals("Shoulder Taps")) {
-			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice1.equals("Wide Grip Pushup")) {
-			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice1.equals("Elevated Pushup")) {
-			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		} else if (choice1.equals("Pike Push-Up")) {
-			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
-		}
-		
-		
-		Image Gif2 = new Image(this.gif2);
-		Image AltGif2 = new Image(this.Altgif2);
-		ImageView view1 = new ImageView(Gif2);
-		ImageView Altview1 = new ImageView(AltGif2);
-		view1.setImage(Gif2);
-		view1.setX(150);
-		view1.setY(75);
-		view1.setFitWidth(150);
-		view1.setPreserveRatio(true);
-		Altview1.setImage(AltGif2);
-		Altview1.setX(275);
-		Altview1.setY(75);
-		Altview1.setFitWidth(150);
-		Altview1.setPreserveRatio(true);
-		
-	
-		
-		if (choice2.equals("Dive-Bomber Push-Up")) {
-			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
-		} else if (choice2.equals("Shoulder Taps")) {
-			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
-		} else if (choice2.equals("Wide Grip Pushup")) {
-			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
-		} else if (choice2.equals("Elevated Pushup")) {
-			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
-		} else if (choice2.equals("Pike Push-Up")) {
-			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
-		}
-
-		Image Gif3 = new Image(this.gif3);
-		Image AltGif3 = new Image(this.Altgif3);
-		ImageView view2 = new ImageView(Gif3);
-		ImageView Altview2 = new ImageView(AltGif3);
-		view2.setImage(Gif3);
-		view2.setX(150);
-		view2.setY(75);
-		view2.setFitWidth(150);
-		view2.setPreserveRatio(true);
-		Altview2.setImage(AltGif3);
-		Altview2.setX(275);
-		Altview2.setY(75);
-		Altview2.setFitWidth(150);
-		Altview2.setPreserveRatio(true);
-		
-		
-		
-		hbox.getChildren().addAll(Space, WorkoutText, WorkoutText1);
-		Group group = new Group();
-		
-		Scene scene = new Scene(group, 600, 400);
-		workoutInProgress.setTitle("Workout In Progress");
-		workoutInProgress.setScene(scene);
-		workoutInProgress.show();
-		
-		
-		group.getChildren().add(root);
-		group.getChildren().add(hbox);
-		group.getChildren().add(view);
-		group.getChildren().add(Altview);
-		try {
-			  Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			  Thread.currentThread().interrupt();
-			}
-		group.getChildren().remove(view);
-		group.getChildren().remove(Altview);
-		group.getChildren().add(view1);
-		group.getChildren().add(Altview1);
-		try {
-			  Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			  Thread.currentThread().interrupt();
-			}
-		group.getChildren().remove(view1);
-		group.getChildren().remove(Altview1);
-		group.getChildren().add(view2);
-		group.getChildren().add(Altview2);
-		try {
-			  Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			  Thread.currentThread().interrupt();
-			}
-
-
-	}
-
 }
 
 class DurDiff extends Application {
@@ -685,8 +479,180 @@ class DurDiff extends Application {
 				// primaryStage.close();
 			} else {
 				// Do Nothing
-
 			}
 		});
+	}
+}
+
+class workoutInProgress extends Application {
+
+	public String type;
+	public String choice;
+	public String choice1;
+	public String choice2;
+	String gif1;
+	String gif2;
+	String gif3;
+	String Altgif1;
+	String Altgif2;
+	String Altgif3;
+	public Timeline timeline;
+    public int currentGifIndex = 0;
+    public String[] gifs = new String[4];
+    public String[] Altgifs = new String[4];
+
+	public void start(Stage workoutInProgress) {
+		VBox root = new VBox(20);
+		HBox hbox = new HBox(20);
+
+		Text Space = new Text();
+		String text0 = "";
+		Text WorkoutText = new Text();
+		String text = "Workout";
+		Text WorkoutText1 = new Text();
+		String text1 = "Alternate Workout";
+
+		Button quitButton = new Button("Quit");
+		Button testButton = new Button("Test");
+
+		quitButton.setOnAction(e -> {
+			// Create a new window for the user profile GUI
+			Stage workoutsStage = new Stage();
+			WorkoutsGUI workoutsGUI = new WorkoutsGUI();
+			workoutsGUI.start(workoutsStage);
+			workoutInProgress.close();
+		});
+
+		testButton.setOnAction(e -> {
+			// Create a new window for the user profile GUI
+			System.out.println(this.choice);
+			System.out.println(this.choice1);
+			System.out.println(this.choice2);
+		});
+
+		root.getChildren().add(quitButton);
+
+		root.getChildren().add(testButton);
+
+		quitButton.setTranslateX(0);
+		quitButton.setTranslateY(0);
+
+		testButton.setTranslateX(15);
+		testButton.setTranslateY(15);
+
+		Space.setText(text0);
+		Space.setTranslateX(100);
+		Space.setTranslateY(0);
+
+		WorkoutText.setText(text);
+		WorkoutText.setTranslateX(150);
+		WorkoutText.setTranslateY(0);
+
+		WorkoutText1.setText(text1);
+		WorkoutText1.setTranslateX(275);
+		WorkoutText1.setTranslateY(0);
+
+		if (choice.equals("Dive-Bomber Push-Up")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		} else if (choice.equals("Shoulder Taps")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		} else if (choice.equals("Wide Grip Pushup")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		} else if (choice.equals("Elevated Pushup")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		} else if (choice.equals("Pike Push-Up")) {
+			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		}   
+		
+		if (choice1.equals("Dive-Bomber Push-Up")) {
+			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
+		} else if (choice1.equals("Shoulder Taps")) {
+			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
+		} else if (choice1.equals("Wide Grip Pushup")) {
+			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
+		} else if (choice1.equals("Elevated Pushup")) {
+			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
+		} else if (choice1.equals("Pike Push-Up")) {
+			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
+		}		
+		
+		if (choice2.equals("Dive-Bomber Push-Up")) {
+			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
+		} else if (choice2.equals("Shoulder Taps")) {
+			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
+		} else if (choice2.equals("Wide Grip Pushup")) {
+			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
+		} else if (choice2.equals("Elevated Pushup")) {
+			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
+		} else if (choice2.equals("Pike Push-Up")) {
+			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif3.gif";
+		}
+		
+		this.gifs[0] = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/blank.png";
+		this.Altgifs[0] = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/Workout%20Icons/blank.png";
+		this.gifs[1] = this.gif1;
+		this.Altgifs[1] = this.Altgif1;
+		this.gifs[2] = this.gif2;
+		this.Altgifs[2] = this.Altgif2;
+		this.gifs[3] = this.gif3;
+		this.Altgifs[3] = this.Altgif3;
+		
+		Image image = new Image(gifs[currentGifIndex]);
+		ImageView imageView = new ImageView(image);
+		Image Aimage = new Image(Altgifs[currentGifIndex]);
+		ImageView AimageView = new ImageView(Aimage);
+
+        root.getChildren().add(imageView);
+        root.getChildren().add(AimageView);
+        
+        timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> {
+            // Cycle to the next GIF
+            currentGifIndex = (currentGifIndex + 1) % gifs.length;
+            Image newImage = new Image(gifs[currentGifIndex]);
+            imageView.setImage(newImage);
+            Image AnewImage = new Image(Altgifs[currentGifIndex]);
+            AimageView.setImage(AnewImage);
+            imageView.setTranslateX(150);
+    		imageView.setTranslateY(75);
+    		imageView.setFitWidth(150);
+    		imageView.setPreserveRatio(true);
+    		AimageView.setTranslateX(350);
+    		AimageView.setTranslateY(75);
+    		AimageView.setFitWidth(150);
+    		AimageView.setFitHeight(100);
+    		AimageView.setPreserveRatio(true);
+            
+        }));
+        int numGifs = gifs.length;
+        timeline.setCycleCount(numGifs);
+        timeline.play();
+		
+		hbox.getChildren().addAll(Space, WorkoutText, WorkoutText1);
+		Group group = new Group();
+		
+		Scene scene = new Scene(group, 600, 400);
+		workoutInProgress.setTitle("Workout In Progress");
+		workoutInProgress.setScene(scene);
+		workoutInProgress.show();
+		
+		group.getChildren().add(root);
+		group.getChildren().add(hbox);
+		group.getChildren().add(imageView);
+		group.getChildren().add(AimageView);
 	}
 }
