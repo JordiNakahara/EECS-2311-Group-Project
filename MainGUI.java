@@ -658,19 +658,19 @@ class workoutInProgress extends Application {
 
 		if (choice.equals("Dive-Bomber Push-Up")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/DIVE-BOMBER%20PUSH-UP.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Shoulder Taps")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/Shoulder%20taps.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Wide Grip Pushup")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/wide%20grip%20pushup.gif";
 			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Elevated Pushup")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/WIde%20grip%20pushup.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Pike Push-Up")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Chest/PIKE%20PUSH-UP.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}   
 		
 		if (choice1.equals("Dive-Bomber Push-Up")) {
@@ -709,67 +709,67 @@ class workoutInProgress extends Application {
 		
 		if (choice.equals("Squats")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Squats.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Lunges")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/LUNGES.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Flutter Kicks")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/flutter%20kicks.gif";
 			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Calf Raises")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Calf%20Raises.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Run on the Spot")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Run%20on%20the%20spot.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Squats")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Squats.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Lunges")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/LUNGES.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Flutter Kicks")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/flutter%20kicks.gif";
 			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Calf Raises")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Calf%20Raises.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Run on the Spot")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Run%20on%20the%20spot.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Squats")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Squats.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Lunges")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/LUNGES.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Flutter Kicks")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/flutter%20kicks.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Calf Raises")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Calf%20Raises.gif";
 			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Run on the Spot")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/legs/Run%20on%20the%20spot.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Burpees")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Burpees.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Jumping Jacks")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Jumping%20Jacks.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Mountain Climbers")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Mountain%20climbers.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("High Knees")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/High%20knees.gif";
-			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Reverse Lunge Kicks")) {
 			gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Lunge%20Kick.gif";
 			Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
@@ -777,16 +777,16 @@ class workoutInProgress extends Application {
 		
 		if (choice.equals("Burpees")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Burpees.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Jumping Jacks")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Jumping%20Jacks.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Mountain Climbers")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Mountain%20climbers.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("High Knees")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/High%20knees.gif";
-			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Reverse Lunge Kicks")) {
 			gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Lunge%20Kick.gif";
 			Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
@@ -794,84 +794,84 @@ class workoutInProgress extends Application {
 		
 		if (choice.equals("Burpees")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Burpees.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Jumping Jacks")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Jumping%20Jacks.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Mountain Climbers")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Mountain%20climbers.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("High Knees")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/High%20knees.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Reverse Lunge Kicks")) {
 			gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Cardio/Lunge%20Kick.gif";
-			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+			Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Situps")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Russian Twists")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
 		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("V Sitt")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/V%20sitt.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Bicycle Crunch")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Situps")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Russian Twists")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("V Sitt")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/V%20sitt.gif";
 		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Bicycle Crunch")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Situps")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Russian Twists")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("V Sitt")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/V%20sitt.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Bicycle Crunch")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Situps")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Situps.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Russian Twists")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Russian%20twist%20exercise.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("V Sitt")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/V%20sitt.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Bicycle Crunch")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Bicycle%20Crunches.gif";
 		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
@@ -879,53 +879,53 @@ class workoutInProgress extends Application {
 		
 		if (choice.equals("Tricep Dips")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/tricep%20dip.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Inch Worms")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Inch%20worms.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank Push Up")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Plank%20Push%20Up.gif";
 		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Plank Walk")) {
 		    gif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/plank%20walk.gif";
-		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif1 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Tricep Dips")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/tricep%20dip.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Inch Worms")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Inch%20worms.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank Push Up")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Plank%20Push%20Up.gif";
 		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Plank Walk")) {
 		    gif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/plank%20walk.gif";
-		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif2 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		if (choice.equals("Tricep Dips")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/tricep%20dip.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Abs/Extended%20plank.gif";
 		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
 		} else if (choice.equals("Inch Worms")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Inch%20worms.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank Push Up")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/Plank%20Push%20Up.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		} else if (choice.equals("Plank Walk")) {
 		    gif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/Arms/plank%20walk.gif";
-		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif1.gif";
+		    Altgif3 = "https://raw.githubusercontent.com/JordiNakahara/EECS-2311-Group-Project/main/GIFS/altgifs/testgif2.gif";
 		}
 		
 		
