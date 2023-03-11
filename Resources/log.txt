@@ -154,6 +154,7 @@
   
 ## Harrish's Commits
   - Helped other members with their coding assignments for 4 hours.
+  - Adjusted some graphical issues.
   
 ## Gaurav's Commits
   - Helped members with their coding assignments for 4 hours.
