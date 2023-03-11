@@ -100,8 +100,9 @@ public class MainGUI extends Application {
 
 class UserInputGUI extends JFrame {
     // Declare components
-    private JLabel ageLabel, heightLabel, weightLabel;
-    private JTextField ageBox, heightBox, weightBox;
+    private JLabel ageLabel, heightLabel, weightLabel, firstLabel, lastLabel, genderLabel;
+    private JTextField ageBox, heightBox, weightBox, firstBox, lastBox;
+    private JComboBox genderBox;
     private JButton submitButton;
     private JPanel inputPanel, buttonPanel;
 
@@ -120,7 +121,22 @@ class UserInputGUI extends JFrame {
         inputPanel = new JPanel(new GridLayout(3, 2));
         buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
+        firstLabel = new JLabel("First Name");
+        lastLabel = new JLabel("Last Name");
+        genderLabel = new JLabel("Gender");
+        firstBox = new JTextField(10);
+        lastBox = new JTextField(10);
+        genderBox = new JComboBox();
+        genderBox.addItem('M');
+        genderBox.addItem('F');
+
         // Adding parts to the window
+        inputPanel.add(firstLabel);
+        inputPanel.add(firstBox);
+        inputPanel.add(lastLabel);
+        inputPanel.add(lastBox);
+        inputPanel.add(genderLabel);
+        inputPanel.add(genderBox);
         inputPanel.add(ageLabel);
         inputPanel.add(ageBox);
         inputPanel.add(heightLabel);
@@ -140,20 +156,23 @@ class UserInputGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Retrieve input values
+                String first = firstBox.getText().trim();
+                String last = lastBox.getText().trim();
+                char gender = (char) genderBox.getSelectedItem();
                 String age = ageBox.getText().trim();
                 String height = heightBox.getText().trim();
                 String weight = weightBox.getText().trim();
 
                 // Checks values given by user
-                if (age.isEmpty() || height.isEmpty() || weight.isEmpty()) {
-                    JOptionPane.showMessageDialog(UserInputGUI.this, "Please enter values for all the boxs.");
+                if (age.isEmpty() || height.isEmpty() || weight.isEmpty() || first.isEmpty() || last.isEmpty() || gender == ' ') {
+                    JOptionPane.showMessageDialog(UserInputGUI.this, "Please enter values for all the boxes.");
                     return;
                 }
 
                 // Paste values on the next window
                 try {
                     PrintWriter out = new PrintWriter(new FileWriter("user_data.txt", true));
-                    out.println(age + "," + height + "," + weight);
+                    out.println(first + " " + last + "," + gender + ","+ age + "," + height + "," + weight);
                     out.close();
                 } catch (IOException ex) {
                     ex.printStackTrace();
@@ -163,10 +182,10 @@ class UserInputGUI extends JFrame {
                 JOptionPane.showMessageDialog(UserInputGUI.this, "Thank you for your input!\n\nAge: " + age + "\nHeight: " + height + "\nWeight: " + weight);
 
                 // Clear inputted info
-                ageBox.setText("");
-                heightBox.setText("");
-                weightBox.setText("");
-            }
+                User user = new User(first, last, gender, Double.parseDouble(weight), Double.parseDouble(height), Integer.parseInt(age));
+                System.out.println(user.toString());
+                System.out.println(user.BMR);
+                }
         });
 
         // Set frame
@@ -175,8 +194,8 @@ class UserInputGUI extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
 }
+
 
 
 class WorkoutsGUI extends Application {
