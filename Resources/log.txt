@@ -158,6 +158,10 @@
   
 ## Gaurav's Commits
   - Helped members with their coding assignments for 4 hours.
+  - Made some GUI changes to make the GUI look and function better for 3 hours
+  - Uplaoded mainGUI, added some exercises under its specific group once again. added the alternate gifs and fixed  errors from url and errors due to for 3 hours
+  - Updated updated Gifs for some workouts and made the changes accordingly in the WorkoutsInProgress gui for 2 hours.
+  - Updated UserInput GUI to take in more of the users data for 2 hours.
   
  ##Harjot's Commits
   - Uplaoded mainGUI, addded all exercises under their specific group once again,.this time in the new format (alt1 and altgif1 -3) this fixed all errors from url and   any errors due to gif file size being too large - this took about 2 hours
