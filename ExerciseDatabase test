@@ -1,0 +1,101 @@
+import database.ExerciseDatabase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.TestInstance;
+
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+
+
+public class ExerciseDatabaseTest {
+
+
+    @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest]")
+    public void readExerciseTest() {
+        String exerciseType = "arms";
+        String exercise = "plank push up";
+        String expectedResult = "plank push up";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    } @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest]")
+    public void readExerciseTest4() {
+        String exerciseType = "arms";
+        String exercise = "plank push up";
+        String expectedResult = "plank push up";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    }
+    @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest2]")
+    public void readExerciseTest2() {
+        String exerciseType = "arms";
+        String exercise = "tricep dips";
+        String expectedResult = "burpees";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    }
+
+    @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest3]")
+    public void readExerciseTest3() {
+        String exerciseType = "chest";
+        String exercise = "dive bomber push-up";
+        String expectedResult = "dive bomber push-up";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    }
+
+    @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest6]")
+    public void readExerciseTest6() {
+        String exerciseType = "cardio";
+        String exercise = "mountain climbers";
+        String expectedResult = "mountain climbers";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    }
+
+    @org.junit.Test
+    @DisplayName("Test Case [readExerciseTest7]")
+    public void readExerciseTest7() {
+        String exerciseType = "legs";
+        String exercise = "lunges";
+        String expectedResult = "lunges";
+        String actual = ExerciseDatabase.readExercise(exerciseType, exercise);
+        Assertions.assertEquals(expectedResult, actual);
+        System.out.println("========================================");
+        System.out.println("Expected = " + expectedResult);
+        System.out.println("========================================");
+        System.out.println("Actual = " + actual);
+
+    }
+
+
+}
