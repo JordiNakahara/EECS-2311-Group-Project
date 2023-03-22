@@ -1,0 +1,132 @@
+import com.mysql.cj.exceptions.AssertionFailedException;
+import database.SQLIntialization;
+import database.User;
+import database.UserDatabase;
+import junit.framework.AssertionFailedError;
+import org.junit.Assume;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.TestInstance;
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class UserDatabaseTest {
+    private User user;
+
+
+
+    @Test
+    @DisplayName("Test Case [writeUserToFileTest]")
+    public void writeUserToFileTest() {
+        user = new User("Zeena", "Mark", 'F', 65, 6.0, 24);
+        UserDatabase.writeUserToFile(user);
+
+    }
+
+    @Test
+    @DisplayName("Test Case [readUserFileTest]")
+    public void readUserFileTest() {
+        String expectedResult = "First name: Zeena\n" +
+                "Last name: Mark\n" +
+                "Gender: F\n" +
+                "Weight: 65.00000\n" +
+                "Height: 6.00000\n" +
+                "Age: 24\n" +
+                "BMR: 1097.25000\n";
+        Assertions.assertEquals(expectedResult,UserDatabase.readUserFile());
+        System.out.println("========================================");
+        System.out.println("Expected = " +expectedResult );
+        System.out.println("========================================");
+        System.out.println("Actual = " +UserDatabase.readUserFile() );
+    }
+
+    @Test
+    @DisplayName("Test Case [readFirstNameTest]")
+    public void readFirstNameTest() {
+        UserDatabase.writeUserToFile(user);
+        String expectedResult = "Zeena";
+        Assertions.assertEquals(expectedResult ,UserDatabase.readFirstName());
+        System.out.println("========================================");
+        System.out.println("Expected = " +expectedResult );
+        System.out.println("========================================");
+        System.out.println("Actual = " +UserDatabase.readFirstName() );
+
+    }
+
+    @Test
+    @DisplayName("Test Case [readLastNameTest]")
+    public void readLastNameTest() {
+        UserDatabase.writeUserToFile(user);
+        String expectedResult = "Mark";
+        Assertions.assertEquals(expectedResult ,UserDatabase.readLastName());
+        System.out.println("========================================");
+        System.out.println("Expected = " +expectedResult );
+        System.out.println("========================================");
+        System.out.println("Actual = " +UserDatabase.readLastName() );
+    }
+
+    @Test
+    @DisplayName("Test Case [readGenderTest]")
+    public void readGenderTest() {
+
+        char expectedResult = 'F';
+        Assertions.assertEquals(expectedResult ,UserDatabase.readGender());
+        System.out.println("========================================");
+        System.out.println("Expected = " +expectedResult );
+        System.out.println("========================================");
+        System.out.println("Actual = " +UserDatabase.readGender() );
+    }
+
+    @Test
+    @DisplayName("Test Case [readWeightTest]")
+    public void readWeightTest() {
+
+        double expectedResult = 65.0 ;
+        Assertions.assertEquals(expectedResult, UserDatabase.readWeight());
+        System.out.println("=====================================");
+        System.out.println("Expected Outcome : " + expectedResult);
+        System.out.println("=======================================");
+        System.out.println("Actual   Outcome : " + UserDatabase.readWeight());
+        System.out.println("\nTest Successful");
+    }
+
+    @Test
+    @DisplayName("Test Case [readHeightTest]")
+    public void readHeightTest() {
+
+        double expectedResult = 6.0;
+        Assertions.assertEquals(expectedResult, UserDatabase.readHeight());
+        System.out.println("=====================================");
+        System.out.println("Expected Outcome : " + expectedResult);
+        System.out.println("=======================================");
+        System.out.println("Actual   Outcome : " + UserDatabase.readHeight());
+        System.out.println("\nTest Successful");
+    }
+
+    @Test
+    @DisplayName("Test Case [readAgeTest]")
+    public void readAgeTest() {
+        int expectedResult = 24;
+        Assertions.assertEquals(expectedResult, UserDatabase.readAge());
+        System.out.println("=====================================");
+        System.out.println("Expected Outcome : " + expectedResult);
+        System.out.println("=======================================");
+        System.out.println("Actual   Outcome : " + UserDatabase.readAge());
+        System.out.println("\nTest Successful");
+    }
+    @Test
+    @DisplayName("Test Case [readBMRTest]")
+    public void readBMRTest() {
+
+
+        double expectedResult = 1097.25;
+        Assertions.assertEquals(expectedResult, UserDatabase.readBMR());
+        System.out.println("=====================================");
+        System.out.println("Expected Outcome : " + expectedResult);
+        System.out.println("=======================================");
+        System.out.println("Actual   Outcome : " + UserDatabase.readBMR());
+        System.out.println("\nTest Successful");
+    }
+}
