@@ -27,7 +27,7 @@ public class TimerApp extends Application {
         timeInput.setPromptText("Enter time in seconds");
         timeInput.setFocusTraversable(false);
         Button startButton = new Button("Start");
-        Button stopButton = new Button("Stop");
+        Button stopButton = new Button("Increase");
         stopButton.setDisable(true);
         timerLabel = new Label("00:00");
         timerLabel.setStyle("-fx-font-size: 92px");
@@ -36,7 +36,9 @@ public class TimerApp extends Application {
         startButton.setOnAction(event -> {
             // Parse the user input and start the timer
 try {
-                secondsRemaining = Integer.parseInt(timeInput.getText());
+                secondsRemaining = Integer.parseInt(timeInput.getText()); // right here where we set the time
+                //will need to carry a variable over which determines the time
+                // depending on the difficulty chosen - this should be fairly straight forward
                 startButton.setDisable(true);
                 startTimer();
                 stopButton.setDisable(false);
@@ -48,9 +50,9 @@ try {
         });
         stopButton.setOnAction(event -> {
             // Stop the timer
-            stopTimer();
-            startButton.setDisable(false);
-            stopButton.setDisable(true);
+            breakIncrease();
+            startButton.setDisable(true);
+            stopButton.setDisable(false);
         });
 
         // Add the components to the layout
@@ -74,7 +76,7 @@ private void startTimer() {
             int seconds = secondsRemaining % 60;
             timerLabel.setText(String.format("%02d:%02d", minutes, seconds));
 
-            // Stop the timer when the countdown reaches zero
+            // Stop the timer when the count-down reaches zero
             if (secondsRemaining == 0) {
                 stopTimer();
             }
@@ -86,6 +88,14 @@ private void startTimer() {
     private void stopTimer() {
         timeline.stop();
     }
+    
+    /*
+     * Ignore this for now as this will be used for the break timer that we will have in- between
+     * */
+    private void breakIncrease() {
+    	secondsRemaining = secondsRemaining + 30;
+    } 
+    
 
     public static void main(String[] args) {
         launch(args);
