@@ -10,3 +10,10 @@
 ## For this iteration we have decided to implement the following small user stories
 1. Fixed altgifs
 2. fixed difficulty settings 
+
+
+How to run 
+
+JavaFX-based workout application with a graphical user interface. The application allows users to select a workout with different durations and difficulty levels. 
+Make sure you have Java and JavaFX installed on your computer.
+The application will launch, displaying the main user interface. From there, you can select a workout with a desired difficulty level and duration. After selecting a workout, the timer will start, and you can begin your workout.
