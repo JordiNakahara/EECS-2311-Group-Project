@@ -17,3 +17,10 @@ How to run
 JavaFX-based workout application with a graphical user interface. The application allows users to select a workout with different durations and difficulty levels. 
 Make sure you have Java and JavaFX installed on your computer.
 The application will launch, displaying the main user interface. From there, you can select a workout with a desired difficulty level and duration. After selecting a workout, the timer will start, and you can begin your workout.
+
+
+issues
+timer not showing up
+gifs not always changing 
+unable to complete calorie burn counter
+end screen not showing up
