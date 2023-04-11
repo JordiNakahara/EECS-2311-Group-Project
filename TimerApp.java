@@ -1,4 +1,4 @@
-package timerapp.timerappstop;
+package eecs2311gui;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -19,6 +19,7 @@ public class TimerApp extends Application {
     private int secondsRemaining;
     private Timeline timeline;
     private Label timerLabel;
+    private int numBreakExtensions = 0;
 
     @Override
     public void start(Stage primaryStage) {
@@ -35,7 +36,7 @@ public class TimerApp extends Application {
         // Set up the event handlers for the buttons
         startButton.setOnAction(event -> {
             // Parse the user input and start the timer
-try {
+            try {
                 secondsRemaining = Integer.parseInt(timeInput.getText()); // right here where we set the time
                 //will need to carry a variable over which determines the time
                 // depending on the difficulty chosen - this should be fairly straight forward
@@ -45,14 +46,17 @@ try {
             }catch (NumberFormatException numberFormatException){
                 System.out.println("Enter Number Of Seconds In Integer Value");
             }
-
-
         });
         stopButton.setOnAction(event -> {
-            // Stop the timer
-            breakIncrease();
-            startButton.setDisable(true);
-            stopButton.setDisable(false);
+            // Extend break
+            if (numBreakExtensions < 3 && secondsRemaining > 0) {
+                breakIncrease();
+                numBreakExtensions++;
+                System.out.println("Break extended");
+            } else if (numBreakExtensions >= 3) {
+                stopButton.setDisable(true);
+                System.out.println("Maximum break extensions reached.");
+            }
         });
 
         // Add the components to the layout
@@ -68,7 +72,8 @@ try {
         primaryStage.setTitle("Timer App");
         primaryStage.show();
     }
-private void startTimer() {
+    
+    private void startTimer() {
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             // Decrement the remaining time and update the display
             secondsRemaining--;
@@ -93,9 +98,8 @@ private void startTimer() {
      * Ignore this for now as this will be used for the break timer that we will have in- between
      * */
     private void breakIncrease() {
-    	secondsRemaining = secondsRemaining + 30;
+        secondsRemaining = secondsRemaining + 30;
     } 
-    
 
     public static void main(String[] args) {
         launch(args);
